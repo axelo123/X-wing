@@ -113,15 +113,17 @@ namespace X_wing.Core
         #endregion
 
         #region Methods
-
-        public ModelCore HasOne(string table, string IdKeyForeign, string IdKeyLocal)
+        
+        // pour 1 à 1 
+        public List<MyDB.MyDB.IRecord> HasOne(string nomTableForeign, string idForeign, int idLocal)
         {
-            return this;
+            return App.Liaison_1a1(this.NomTable, nomTableForeign, idForeign, idLocal);
         }
-        public List<ModelCore> HasMany(string table, string IdKeyForeign, string IdKeyLocal)
+        //pour 1 à n
+        public List<MyDB.MyDB.IRecord> HasMany(string nomTableForeign, string idKeyForeign, int idKeyLocal)
         {
 
-            return this.m_M_HasMany;
+            return App.Liaison_1aN(nomTableForeign, idKeyForeign, idKeyLocal);
         }
         // pour n à n 
         public List<ModelCore> BelongsToMany(string TableRelation, string IdKeyForeign, string IdKeyLocal)
@@ -131,7 +133,7 @@ namespace X_wing.Core
             return this.m_M_BelongsToMany;
         }
 
-
+        // pour table relation
         public List<Relation> Relations()
         {
             return this.relations;
