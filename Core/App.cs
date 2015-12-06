@@ -47,6 +47,37 @@ namespace X_wing.Core
             }
             return enreg;
         }
+        // cvp loc, fig foreign, id_fig idfor, 5 id local
+        public static List<MyDB.MyDB.IRecord> Liaison_1a1(string nomTableLocal, string nomTableForeign, string idKeyForeign, int idLocal)
+        {
+            List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
+            string query = string.Format("SELECT * FROM {1} WHERE {1}.id IN (SELECT {0}.{2} FROM {0} WHERE {0}.id = {3})", nomTableLocal, nomTableForeign, idKeyForeign, idLocal);
+            foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
+            {
+                enreg.Add(elem);
+            }
+            return enreg;
+        } 
+        public static List<MyDB.MyDB.IRecord> Liaison_1aN( string nomTableForeign, string idKeyForeign, int idLocal)
+        {
+            List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
+            string query = string.Format("SELECT * FROM {0} WHERE {0}.{1} = {2}", nomTableForeign, idKeyForeign, idLocal);
+            foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
+            {
+                enreg.Add(elem);
+            }
+            return enreg;
+        }
+        public static List<MyDB.MyDB.IRecord> Liaison_NaN(string nomTableRelation, string idKeyForeign, int idLocal)
+        {
+            List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
+            string query = string.Format("SELECT * FROM {1} WHERE {1}.{2} = {3}", nomTableRelation, idKeyForeign, idLocal);
+            foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
+            {
+                enreg.Add(elem);
+            }
+            return enreg;
+        }
 
         #endregion
     }
