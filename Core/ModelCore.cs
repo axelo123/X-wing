@@ -126,10 +126,8 @@ namespace X_wing.Core
             return App.Liaison_1aN(nomTableForeign, idKeyForeign, idKeyLocal);
         }
         // pour n à n 
-        public List<ModelCore> BelongsToMany(string TableRelation, string IdKeyForeign, string IdKeyLocal)
+        public List<ModelCore> BelongsToMany(string TableRelation, int IdKeyLocal)
         {
-
-            this.relations.Add(new Relation(1, 1));
             return this.m_M_BelongsToMany;
         }
 

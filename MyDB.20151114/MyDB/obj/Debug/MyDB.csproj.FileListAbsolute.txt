@@ -1,0 +1,6 @@
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\bin\Debug\MyDB.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\bin\Debug\MyDB.pdb
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\bin\Debug\MySql.Data.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\obj\Debug\MyDB.csprojResolveAssemblyReference.cache
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\obj\Debug\MyDB.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\obj\Debug\MyDB.pdb

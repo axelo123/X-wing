@@ -23,7 +23,7 @@ namespace X_wing.Core
 
         #region Constructor
 
-        public Relation(int id_Foreigner, int id_Local)
+        public Relation()
         {
 
 

@@ -68,10 +68,10 @@ namespace X_wing.Core
             }
             return enreg;
         }
-        public static List<MyDB.MyDB.IRecord> Liaison_NaN(string nomTableRelation, string idKeyForeign, int idLocal)
+        public static List<MyDB.MyDB.IRecord> Liaison_NaN(string nomTableRelation, int idLocal)
         {
             List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
-            string query = string.Format("SELECT * FROM {1} WHERE {1}.{2} = {3}", nomTableRelation, idKeyForeign, idLocal);
+            string query = string.Format("SELECT * FROM {1} WHERE {1}.{2} = {3}", nomTableRelation, idLocal);
             foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
             {
                 enreg.Add(elem);

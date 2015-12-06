@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1"/>
+		<title>Exercice de consultations et modifications des données MySql en C#</title>
+		<style>
+			body
+			{
+				background-color:#ffffff;
+			}
+			body, h1, p, li, th, td
+			{
+				color:#000000;
+			}
+			h1, h2
+			{
+				text-align:center;
+			}
+			th, td
+			{
+				text-align:left;
+				vertical-align:bottom;
+				padding-bottom:2px;
+				padding-left:4px;
+				padding-right:4px;
+			}
+			table, td, th
+			{
+				border-style:solid;
+				border-width:1px;
+				border-collapse:collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Le programme doit permettre à l'utilisateur :<ul>
+		<li>d'ajouter, modifier, supprimer des oenologues :<ul>
+		  <li>les informations éditables sont :<ul>
+			<li>le nom, un texte de 3 à 120 caractères et devant être unique</li>
+			<li>l'indice de confiance, une valeur réelle représentant un pourcentage, donc devant être comprise entre 0% et 100% (0.0 et 1.0)</li>
+			<li>la cotation minimale, une valeur entière >= 0 et <= à la cotation maximale</li>
+			<li>la cotation maximale, une valeur entière >= à la cotation minimale et <= 1000</li>
+		  </ul></li>
+		  <li>l'ajout et la modification doivent permettre l'édition de ces valeurs en toute sécurité</li>
+		  <li>la suppression d'un oenologue doit entraîner la suppression en cascade des avis qu'il a pu émettre sur les vins</li>
+		</ul></li>
+		<li>d'ajouter, modifier, supprimer des vins :<ul>
+		  <li>les informations éditables sont :<ul>
+			<li>le nom, un texte de 3 à 160 caractères et devant être unique</li>
+			<li>la sous-catégorie à laquelle appartient le vin ; une sélection parmi les sous-catégories existantes semble être un choix opportun</li>
+			<li>la garde conseillée, les accords culinaires proposés et la description du vin, des textes optionnels et sans limite particulière de taille</li>
+			<li>le nombre de bouteilles que contient une caisse, un nombre entier compris entre 1 et 32</li>
+			<li>la contenance d'une bouteille, valeur entière exprimée en centi-litres, devant être comprise entre 10 et 500</li>
+			<li>un prix indicatif que coûte une bouteille, exprimé en €, valeur monétaire > 0 € et <= au prix indicatif d'une caisse</li>
+			<li>un prix indicatif que coûte une caisse, exprimé en €, valeur monétaire >= au prix indicatif d'une bouteille et < 10000 €<br/>
+			  <i>Idéalement, le programme peut proposer initialement comme prix indicatif d'une caisse, le résultat de la multiplication du nombre de bouteilles d'une caisse par le prix indicatif d'une bouteille, afin de simplifier l'encodage ; l'utilisateur doit néanmoins pouvoir changer cette valeur s'il le désire, par exemple en cas de promotion</i></li>
+		  </ul></li>
+		  <li>l'ajout et la modification doivent permettre l'édition de ces valeurs en toute sécurité</li>
+		  <li>la suppression d'un vin doit entraîner la suppression en cascade des avis qu'il a pu recevoir de la part des oenologues</li>
+		</ul></li>
+		<li>d'ajouter, modifier, supprimer des avis d'un oenologue :<ul>
+		  <li>l'édition se fera par sélection de l'oenologue et du vin, et encodage de la cote que cet oenologue octroit à ce vin ;  la valeur encodée doit être un nombre entier compris entre la cotation minimale et la cotation maximale utilisée par cet oenologue</li>
+		  <li>un oenologue ne peut émettre qu'un seul avis par vin ; il faut donc assurer l'unicité des paires de références (oenologue - vin)</li>
+		  <li>la suppression d'un avis ne requiert aucune autre suppression</li>
+		</ul></li>
+		<li>de consulter la liste des vins, avec ou non, un système de filtre(s) par catégorie, sous-catégorie, ...</li>
+		<li>de sélectionner pour consulter, ou de visualiser directement dans la liste des vins, outre le nom du vin, son prix à la bouteille, sa qualité moyenne estimée [*] et son rapport qualité/prix estimé [**]</li>
+	    </ul></p>
+
+		<p>PS :<ul>
+		<li>[*]  calcul de la qualité moyenne estimée d'un vin :<ul>
+			 <li>si aucun avis n'a été émis sur ce vin, la qualité est de 0</li>
+			 <li>si il existe au moins un avis émis pour ce vin, la qualité est le résultat de l'expression suivante :
+			 <pre>
+                   Somme des produits des cotes relatives attribués par les oenologues à ce vin
+                -------------------------------------------------------------------------------------
+                Somme des indices de confiance attribués aux oenologues ayant émis un avis sur ce vin</pre></li>
+			 <li>une cote relative attribuée par un oenologue à ce vin est calculée par l'expression suivante :<pre>
+                (cote attribuée - cotation minimale) / (cotation maximale - cotation minimale) * indice de confiance</pre>
+			 </li>
+		</ul></li>
+		<li>[**] calcul du rapport qualité/prix estimé d'un vin :<ul>
+			 <li>si aucun avis n'a été émis sur ce vin, le rapport est de 0</li>
+			 <li>si il existe au moins un avis émis pour ce vin, le rapport est égal à la division de la qualité moyenne estimée [*] par le prix d'une bouteille du vin ramenée à une contenance d'un litre</li>
+			 <li>le prix d'une bouteille du vin ramenée à une contenance d'un litre se calcule par l'expression suivante :<pre>
+                   prix d'une bouteille / (contenance d'une bouteille / 100)
+			 </pre></li>
+		     </ul></li>			
+		<li>Attention, tous les calculs mentionnés ci-dessus doivent être réalisés en nombre réel (de préférence avec le type <i>decimal</i>) !</li>
+		<li>Quant on parle de prix exprimé en euro, seuls deux décimales après la virgule sont nécessaires</li>
+		</ul></p>
+		
+		<p><img src="oenologie.schema.png"/></p>
+	</body>
+</html>
