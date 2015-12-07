@@ -82,6 +82,8 @@ namespace X_wing.Core
             set { this.m_Connected = value; }
         }
 
+        #endregion
+
         #region Constructor
 
         protected ModelCore(string id, string nomTable, bool hydrate = true)
@@ -95,44 +97,34 @@ namespace X_wing.Core
             m_M_HasOne = new List<ModelCore>();
             m_M_HasMany = new List<ModelCore>();
             m_M_BelongsToMany = new List<ModelCore>();
-        }
 
-        #endregion
-
-        protected ModelCore(string id, bool hydrate = true)
-        {
-            m_PrimaryKey = id;
-            m_Attributs = new List<MyDB.MyDB.IRecord>();
-            m_BDD = new MyDB.MyDB();
-            relations = new List<Relation>();
-            m_M_HasOne = new List<ModelCore>();
-            m_M_HasMany = new List<ModelCore>();
-            m_M_BelongsToMany = new List<ModelCore>();
         }
 
         #endregion
 
         #region Methods
-        
+
         // pour 1 à 1 
-        public List<MyDB.MyDB.IRecord> HasOne(string nomTableForeign, string idForeign, int idLocal)
+        protected T hasOne<T>(string idLocal, string idForeign)
         {
-            return App.Liaison_1a1(this.NomTable, nomTableForeign, idForeign, idLocal);
+            T classeLiée = (T)Activator.CreateInstance(typeof(T));
+            return (T)Convert.ChangeType(classeLiée, typeof(T));
         }
         //pour 1 à n
-        public List<MyDB.MyDB.IRecord> HasMany(string nomTableForeign, string idKeyForeign, int idKeyLocal)
+        protected T hasMany<T>(string idLocal, string idForeign)
         {
-
-            return App.Liaison_1aN(nomTableForeign, idKeyForeign, idKeyLocal);
+            T classeLiée = (T)Activator.CreateInstance(typeof(T));
+            return (T)Convert.ChangeType(classeLiée, typeof(T));
         }
         // pour n à n 
-        public List<ModelCore> BelongsToMany(string TableRelation, int IdKeyLocal)
+        // carte_vaisseau_pilote-type_amelioration rel, Type for, cvp loc , 2 idloc
+        public  BelongsToMany(string nomTableRelation, string nomTableForeign, string idForeign, string name_idLocal, int idLocal)
         {
-            return this.m_M_BelongsToMany;
+            
         }
 
         // pour table relation
-        public List<Relation> Relations()
+        public List<Relation> Relations(string nomTableRelation)
         {
             return this.relations;
         }

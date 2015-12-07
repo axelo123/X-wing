@@ -58,6 +58,7 @@ namespace X_wing.Core
             }
             return enreg;
         } 
+        //cvp foreign, id_figurine idForeign, 2 id_local
         public static List<MyDB.MyDB.IRecord> Liaison_1aN( string nomTableForeign, string idKeyForeign, int idLocal)
         {
             List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
@@ -68,16 +69,19 @@ namespace X_wing.Core
             }
             return enreg;
         }
-        public static List<MyDB.MyDB.IRecord> Liaison_NaN(string nomTableRelation, int idLocal)
+        // carte_vaisseau_pilote-type_amelioration rel, Type for, cvp loc , 2 idloc
+        
+        public static List<MyDB.MyDB.IRecord> Liaison_NaN(string nomTableRelation,string nomTableForeign,string nomTableLocal,string idForeign,string name_idLocal, int idLocal)
         {
             List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
-            string query = string.Format("SELECT * FROM {1} WHERE {1}.{2} = {3}", nomTableRelation, idLocal);
+            string query = string.Format("SELECT * FROM `{1}` WHERE {1}.id IN (SELECT `{0}`.{2} FROM `{0}` WHERE `{0}`.{3} = {4})", nomTableRelation, nomTableForeign, nomTableLocal, idForeign, name_idLocal, idLocal);
             foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
             {
                 enreg.Add(elem);
             }
             return enreg;
         }
+        
 
         #endregion
     }

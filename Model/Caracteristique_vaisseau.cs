@@ -11,8 +11,8 @@ namespace X_wing.Model
     {
         #region Members
 
-        protected string NomTable = "caracteristique_vaisseau";
-
+        static string NomTable = "caracteristique_vaisseau";
+        static string id = "id";
         #endregion
 
         #region Properties
@@ -23,7 +23,7 @@ namespace X_wing.Model
 
         #region Constructor
 
-        private Caracteristique_vaisseau(string id) :base(id)
+        public Caracteristique_vaisseau(string id) :base(id, NomTable)
         {
 
         }
@@ -40,6 +40,10 @@ namespace X_wing.Model
         public int Action(Action action, int id_CV, int id)
         {
             return 1;
+        }
+        public Taille Taille()
+        {
+            return this.hasOne<Taille>("id_taille", "id&quot");
         }
 
         #endregion

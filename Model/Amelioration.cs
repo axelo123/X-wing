@@ -11,8 +11,8 @@ namespace X_wing.Model
     {
         #region Members
 
-        protected string NomTable = "amelioration";
-
+        static string NomTable = "amelioration";
+        static string id = "id";
         #endregion
 
         #region Properties
@@ -23,7 +23,7 @@ namespace X_wing.Model
 
         #region Constructor
 
-        private Amelioration(string id) :base(id)
+        public Amelioration(string id) :base(id,NomTable)
         {
 
         }

@@ -11,7 +11,7 @@ namespace X_wing.Core
     {
         #region Members
 
-        protected string NomTable = null;
+        protected string NomTable ;
         private List<ModelCore> Models;
         private List<MyDB.MyDB.IRecord> Attributs;
 
@@ -23,11 +23,11 @@ namespace X_wing.Core
 
         #region Constructor
 
-        public Relation()
+        public Relation(string nomTable)
         {
-
-
-
+            NomTable = nomTable;
+            Models = new List<ModelCore>();
+            Attributs = new List<MyDB.MyDB.IRecord>();
         }
 
         #endregion

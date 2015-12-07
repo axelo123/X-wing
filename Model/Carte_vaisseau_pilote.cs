@@ -11,8 +11,8 @@ namespace X_wing.Model
     {
         #region Members
 
-        protected string NomTable = "carte_vaisseau_pilote";
-
+        static string NomTable = "carte_vaisseau_pilote";
+        static string id = "id";
         #endregion
 
         #region Properties
@@ -23,7 +23,7 @@ namespace X_wing.Model
 
         #region Constructor
 
-        private Carte_vaisseau_pilote(string id) :base(id)
+        public Carte_vaisseau_pilote(string id) :base(id, NomTable)
         {
 
         }
@@ -32,24 +32,21 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int NomCarte(Nom_carte nomCarte, int id_CVP, int id)
-        { 
-            return 1;
+
+
+        public Type_amelioration TypeAmelioration()
+        {
+            return new Type_amelioration("type");
         }
 
-        public int TypeAmelioration(Type_amelioration TA, int id_CVP, int id)
+        public Figurine Figurine()
         {
-            return 1;
+            return this.hasOne<Figurine>("id_figurine", "id&quot");
         }
 
-        public int Figurine(Figurine figurine, int id_CVP, int id)
+        public Faction Faction()
         {
-            return 1;
-        }
-
-        public int Faction(Faction faction, int id_CVP, int id)
-        {
-            return 1;
+            return this.hasOne<Faction>("id_faction", "id&quot");
         }
 
         public int Utilisateur(Utilisateur utilisateur, int id_CVP, int id)
@@ -62,11 +59,14 @@ namespace X_wing.Model
             return 1;
         }
 
-        public int Caracteristique_vaisseau(Caracteristique_vaisseau CV, int id_CVP, int id)
+        public Caracteristique_vaisseau Caracteristique_vaisseau()
         {
-            return 1;
+            return this.hasOne<Caracteristique_vaisseau>("id_caracteristique_vaisseau", "id&quot");
         }
-
+        public Nom_carte Carte()
+        {
+            return this.hasOne<Nom_carte>("id_nom_carte", "id&quot");
+        }
         #endregion
     }
 }
