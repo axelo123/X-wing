@@ -7,11 +7,14 @@ using MyDB;
 
 namespace X_wing.Core
 {
-    class App
+    /// <summary>
+    /// classe outils 
+    /// </summary>
+    public static class App
     {
         #region Members
 
-        protected static MyDB.MyDB BDD;
+        public static MyDB.MyDB BDD = new MyDB.MyDB("x_wing", "b5NmmVrLM8VGL4dx", "x_wing", "localhost");
 
         #endregion
 
@@ -28,18 +31,24 @@ namespace X_wing.Core
         #endregion
 
         #region Methods
-
-        public static MyDB.MyDB ConnecterBD()
+        /// <summary>
+        /// appel de la methode Connect du projet MyDB
+        /// </summary>
+        public static void ConnecterBD()
         {
-            BDD = new MyDB.MyDB("stock", "b5NmmVrLM8VGL4dx", "stock", "localhost");
-            return BDD; 
+            BDD.Connect();
         }
-
-        public static List<MyDB.MyDB.IRecord> recuperation(string nomTable)
+        /// <summary>
+        /// récuperation d'un enregistrement
+        /// </summary>
+        /// <param name="nomTable">Nom de la table</param>
+        /// <param name="primaryKey">Nom de la cle primaire</param>
+        /// <param name="id">Nom de l'id a recuperer</param>
+        /// <returns>Liste d'enregistrement</returns>
+        public static List<MyDB.MyDB.IRecord> recuperation(string nomTable,string primaryKey, int id)
         {
-
             List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
-            string query = string.Format("SELECT * FROM {0} ", nomTable);
+            string query = string.Format("SELECT * FROM {0} WHERE {1} = {2}", nomTable, primaryKey, id);
 
             foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
             {
@@ -47,6 +56,7 @@ namespace X_wing.Core
             }
             return enreg;
         }
+
         // cvp loc, fig foreign, id_fig idfor, 5 id local
         public static List<MyDB.MyDB.IRecord> Liaison_1a1(string nomTableLocal, string nomTableForeign, string idKeyForeign, int idLocal)
         {

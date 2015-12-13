@@ -12,7 +12,7 @@ namespace X_wing.Model
         #region Members
 
         static string NomTable = "carte_vaisseau_pilote";
-        static string id = "id";
+        static string primaryKey = "id";
         #endregion
 
         #region Properties
@@ -23,9 +23,9 @@ namespace X_wing.Model
 
         #region Constructor
 
-        public Carte_vaisseau_pilote(string id) :base(id, NomTable)
+        public Carte_vaisseau_pilote(int id) : base(primaryKey, NomTable, id)
         {
-
+            //Figurine figurine = Figurine();
         }
 
         #endregion
@@ -34,20 +34,20 @@ namespace X_wing.Model
 
 
 
-        public Type_amelioration TypeAmelioration()
-        {
-            return new Type_amelioration("type");
-        }
+        //public Type_amelioration TypeAmelioration()
+        //{
+        //    return new Type_amelioration("type");
+        //}
 
-        public Figurine Figurine()
-        {
-            return this.hasOne<Figurine>("id_figurine", "id&quot");
-        }
+        //public Figurine Figurine()
+        //{
+        //    return this.hasOne<Figurine>("id_figurine", "id&quot");
+        //}
 
-        public Faction Faction()
-        {
-            return this.hasOne<Faction>("id_faction", "id&quot");
-        }
+        //public Faction Faction()
+        //{
+        //    return this.hasOne<Faction>("id_faction", "id&quot");
+        //}
 
         public int Utilisateur(Utilisateur utilisateur, int id_CVP, int id)
         {
@@ -59,14 +59,14 @@ namespace X_wing.Model
             return 1;
         }
 
-        public Caracteristique_vaisseau Caracteristique_vaisseau()
-        {
-            return this.hasOne<Caracteristique_vaisseau>("id_caracteristique_vaisseau", "id&quot");
-        }
-        public Nom_carte Carte()
-        {
-            return this.hasOne<Nom_carte>("id_nom_carte", "id&quot");
-        }
+        //public Caracteristique_vaisseau Caracteristique_vaisseau()
+        //{
+        //    return this.hasOne<Caracteristique_vaisseau>("id_caracteristique_vaisseau", "id&quot");
+        //}
+        //public Nom_carte Carte()
+        //{
+        //    return this.hasOne<Nom_carte>("id_nom_carte", "id&quot");
+        //}
         #endregion
     }
 }

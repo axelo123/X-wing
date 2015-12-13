@@ -11,9 +11,10 @@ namespace X_wing.Core
     {
         #region Members
 
-        protected string NomTable ;
-        private List<ModelCore> Models;
-        private List<MyDB.MyDB.IRecord> Attributs;
+        private ModelCore ModelRelation ;
+        private List<ModelCore> ListModelRelation;
+        private List<Object> ListAttributPivot;
+        private string NomTable;
 
         #endregion
 
@@ -23,11 +24,18 @@ namespace X_wing.Core
 
         #region Constructor
 
-        public Relation(string nomTable)
+        public Relation(ModelCore modelRelation, List<ModelCore> listModelRelation)
         {
-            NomTable = nomTable;
-            Models = new List<ModelCore>();
-            Attributs = new List<MyDB.MyDB.IRecord>();
+            this.ModelRelation = modelRelation;
+            this.ListModelRelation = listModelRelation;
+
+        }
+
+        public Relation (string nomTable, ModelCore modelRelation, List<ModelCore> listModelRelation)
+        {
+            this.NomTable = nomTable;
+            this.ModelRelation = modelRelation;
+            this.ListModelRelation = listModelRelation;
         }
 
         #endregion
@@ -36,8 +44,6 @@ namespace X_wing.Core
 
         public void WithPivot(string argument)
         {
-
-
 
         }
 

@@ -12,7 +12,7 @@ namespace X_wing.Model
         #region Members
 
         static string NomTable = "nom_carte";
-        static string id = "id";
+        static string primaryKey = "id";
         #endregion
 
         #region Properties
@@ -23,7 +23,7 @@ namespace X_wing.Model
 
         #region Constructor
 
-        public Nom_carte(string id) :base(id,NomTable)
+        public Nom_carte(int id) : base(primaryKey, NomTable, id)
         {
 
         }

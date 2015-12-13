@@ -12,7 +12,7 @@ namespace X_wing.Model
         #region Members
 
         static string NomTable = "action";
-        static string id= "id";
+        static string primaryKey = "id";
 
         #endregion
 
@@ -24,7 +24,7 @@ namespace X_wing.Model
 
         #region Constructor
 
-        public Action() : base(id, NomTable)
+        public Action(int id) :base(primaryKey, NomTable,id)
         {
             
         }

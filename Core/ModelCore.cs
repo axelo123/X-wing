@@ -6,98 +6,124 @@ using System.Threading.Tasks;
 
 namespace X_wing.Core
 {
+    /// <summary>
+    /// Classe Parent de chaque model 
+    /// </summary>
     public abstract class ModelCore
     {
         #region Members
 
         protected string m_NomTable;
-        protected List<MyDB.MyDB.IRecord> m_Attributs;
+        protected Dictionary<string, object> m_Attributs;
         private string m_PrimaryKey;
         private MyDB.MyDB m_BDD;
         protected List<Relation> relations;
-        protected List<ModelCore> m_M_HasOne;
-        protected List<ModelCore> m_M_HasMany;
-        protected List<ModelCore> m_M_BelongsToMany;
-        protected bool m_Connected;
+        protected List<ModelCore> m_HasOne;
+        protected List<ModelCore> m_HasMany;
+        protected List<ModelCore> m_BelongsToMany;
 
 
 
         #endregion
 
         #region Ascesseurs
-
+        /// <summary>
+        /// Nom de la table
+        /// </summary>
         public string NomTable
         {
             get { return this.m_NomTable; }
             set { this.m_NomTable = value; }
 
         }
-
-        public List<MyDB.MyDB.IRecord> Attribut
+        /// <summary>
+        /// dictionnaire d'attributs
+        /// </summary>
+        public Dictionary<string, object> Attribut
         {
             get { return this.m_Attributs; }
             set { this.m_Attributs = value; }
-
+       
         }
-
+        /// <summary>
+        /// nom de la cle primaire de la table
+        /// </summary>
         public string PrimaryKey
         {
             get { return this.m_PrimaryKey; }
             set { this.m_PrimaryKey = value; }
         }
-
+        /// <summary>
+        /// reference de la DB
+        /// </summary>
         public MyDB.MyDB BDD
         {
             get { return this.m_BDD; }
             set { this.m_BDD = value; }
         }
-
-        public List<Relation> M_Relation
+        /// <summary>
+        /// Liste des relations de la table
+        /// </summary>
+        public List<Relation> Relation
         {
             get { return this.relations; }
             set { this.relations = value; }
         }
-
-        public List<ModelCore> M_HasOne
+        /// <summary>
+        /// liste des tables avec liaisons 1 a 1
+        /// </summary>
+        public List<ModelCore> HasOne
         {
-            get { return this.m_M_HasOne; }
-            set { this.m_M_HasOne = value; }
+            get { return this.m_HasOne; }
+            set { this.m_HasOne = value; }
         }
-
-        public List<ModelCore> M_HasMany
+        /// <summary>
+        /// liste des tables avec liaisons 1 à n
+        /// </summary>
+        public List<ModelCore> HasMany
         {
-            get { return this.m_M_HasMany; }
-            set { this.m_M_HasMany = value; }
+            get { return this.m_HasMany; }
+            set { this.m_HasMany = value; }
         }
-
-        public List<ModelCore> M_BelongsToMany
+        /// <summary>
+        /// liste des tables avec liaisons n a n
+        /// </summary>
+        public List<ModelCore> BelongsToMany
         {
-            get { return this.m_M_BelongsToMany; }
-            set { this.m_M_BelongsToMany = value; }
-        }
-
-        public bool Connected
-        {
-            get { return this.m_Connected; }
-            set { this.m_Connected = value; }
+            get { return this.m_BelongsToMany; }
+            set { this.m_BelongsToMany = value; }
         }
 
         #endregion
 
         #region Constructor
-
-        protected ModelCore(string id, string nomTable, bool hydrate = true)
+        /// <summary>
+        /// constructeur de Model
+        /// </summary>
+        /// <param name="primaryKey">nom de la cle primaire</param>
+        /// <param name="nomTable">nom de la table a instancier</param>
+        /// <param name="id">valeur de la cle primaire</param>
+        /// <param name="hydrate">true si c'est le premier passage pour l'instance de l'objet</param>
+        protected ModelCore(string primaryKey, string nomTable, int id, bool hydrate = true)
         {
-            m_PrimaryKey = id;
+            m_PrimaryKey = primaryKey;
             m_NomTable = nomTable;
-            m_Attributs = new List<MyDB.MyDB.IRecord>();
-            m_BDD = App.ConnecterBD();
-            m_Connected = m_BDD.Connect();
-            relations = new List<Relation>();
-            m_M_HasOne = new List<ModelCore>();
-            m_M_HasMany = new List<ModelCore>();
-            m_M_BelongsToMany = new List<ModelCore>();
+            m_BDD = App.BDD;
+            m_Attributs = new Dictionary<string, object>();
+            List<MyDB.MyDB.IRecord> enreg = App.recuperation(nomTable,primaryKey,id);
 
+            foreach (MyDB.MyDB.IRecord Element in enreg)
+            {
+                for (int i = 0; i < Element.FieldCount; i++)
+                {
+                    m_Attributs.Add(Element.FieldName(i), Element[i]);
+                }
+            }
+
+            relations = new List<Relation>();
+            m_HasOne = new List<ModelCore>();
+            m_HasMany = new List<ModelCore>();
+            m_BelongsToMany = new List<ModelCore>();
         }
 
         #endregion
@@ -105,26 +131,44 @@ namespace X_wing.Core
         #region Methods
 
         // pour 1 à 1 
-        protected T hasOne<T>(string idLocal, string idForeign)
+        /// <summary>
+        /// methode pour ajouter une liaison dans la liste hasOne
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        protected void AddHasOne<T>() where T : ModelCore
         {
-            T classeLiée = (T)Activator.CreateInstance(typeof(T));
-            return (T)Convert.ChangeType(classeLiée, typeof(T));
+            T classeLier = (T)Activator.CreateInstance(typeof(T));
+            this.m_HasOne.Add(classeLier as ModelCore);
         }
         //pour 1 à n
-        protected T hasMany<T>(string idLocal, string idForeign)
+        /// <summary>
+        /// methode pour ajouter une liaison dans la liste hasMany
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        protected void AddHasMany<T>() where T : ModelCore
         {
-            T classeLiée = (T)Activator.CreateInstance(typeof(T));
-            return (T)Convert.ChangeType(classeLiée, typeof(T));
+            T classeLier = (T)Activator.CreateInstance(typeof(T));
+            this.m_HasMany.Add(classeLier as ModelCore);
         }
         // pour n à n 
-        // carte_vaisseau_pilote-type_amelioration rel, Type for, cvp loc , 2 idloc
-        public  BelongsToMany(string nomTableRelation, string nomTableForeign, string idForeign, string name_idLocal, int idLocal)
+        /// <summary>
+        /// methode pour ajouter une liaison dans la liste belongsToMany
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        protected void AddBelongsToMany<T>() where T : ModelCore
         {
-            
+            T classeLier = (T)Activator.CreateInstance(typeof(T));
+            this.m_BelongsToMany.Add(classeLier as ModelCore);      
         }
+        
 
         // pour table relation
-        public List<Relation> Relations(string nomTableRelation)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nomTableRelation"></param>
+        /// <returns></returns>
+        private List<Relation> Relations(string nomTableRelation)
         {
             return this.relations;
         }

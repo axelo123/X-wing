@@ -10,9 +10,9 @@ namespace X_wing.Model
     class Taille : ModelCore
     {
         static string NomTable = "taille";
-        static string id = "id";
+        static string primaryKey = "id";
 
-        public Taille(string id) :base(id, NomTable)
+        public Taille(int id) : base(primaryKey, NomTable, id)
         {
 
         }

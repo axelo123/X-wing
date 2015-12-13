@@ -12,7 +12,7 @@ namespace X_wing.Model
         #region Members
 
         static string NomTable = "utilisateur_role";
-        static string id = "id";
+        static string primaryKey = "id";
         #endregion
 
         #region Properties
@@ -23,7 +23,7 @@ namespace X_wing.Model
 
         #region Constructor
 
-        public Utilisateur_Role(string id) :base(id,NomTable)
+        public Utilisateur_Role(int id) : base(primaryKey, NomTable, id)
         {
 
         }
