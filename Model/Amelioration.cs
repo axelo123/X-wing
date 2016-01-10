@@ -25,16 +25,37 @@ namespace X_wing.Model
 
         public Amelioration(int id) :base(primaryKey, NomTable, id)
         {
-
+            this.Utilisateur();
         }
 
         #endregion
 
         #region Methods
 
-        public int Faction(Faction faction, int id_amelioration, int id)
+        public void Faction(Faction faction, int id_amelioration, int id)
         {
-            return 1;
+            //this.AddBelongsToMany<Faction>();
+        }
+        
+        public void NomCarte()
+        {
+            this.AddHasOne<Nom_carte>();                       
+        }
+        public void TypeAmelioration()
+        {
+            this.AddHasOne<Type_amelioration>();
+        }
+        public void EscadronCarteVaisseauPilote()
+        {
+           // this.AddBelongsToMany<Escadron_Carte_vaisseau_pilote>();
+        }
+        public void Utilisateur()
+        {
+            this.AddBelongsToMany<Utilisateur>("utilisateur-amelioration", "id_amelioration", "id_utilisateur", "id_utilisateur");
+        }
+        public void Taille()
+        {
+            this.AddHasOne<Taille>();
         }
 
         #endregion

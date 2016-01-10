@@ -7,14 +7,17 @@ using MyDB;
 
 namespace X_wing.Core
 {
-    public class Relation
+    public class Relation 
     {
         #region Members
 
-        private ModelCore ModelRelation ;
+        private ModelCore ModelLier ;
         private List<ModelCore> ListModelRelation;
-        private List<Object> ListAttributPivot;
-        private string NomTable;
+        private Dictionary<string, object> DictAttributPivot=new Dictionary<string, object>();
+        private List<string> NomAttribut;
+        private string nomTable;
+
+
 
         #endregion
 
@@ -24,18 +27,18 @@ namespace X_wing.Core
 
         #region Constructor
 
-        public Relation(ModelCore modelRelation, List<ModelCore> listModelRelation)
+        public Relation(string TableRelationnelle, Tuple<string, int> id_local, Tuple<string, int> id_etranger, string nomIdForeign)
         {
-            this.ModelRelation = modelRelation;
-            this.ListModelRelation = listModelRelation;
-
-        }
-
-        public Relation (string nomTable, ModelCore modelRelation, List<ModelCore> listModelRelation)
-        {
-            this.NomTable = nomTable;
-            this.ModelRelation = modelRelation;
-            this.ListModelRelation = listModelRelation;
+            this.nomTable = TableRelationnelle;
+            List<MyDB.MyDB.IRecord> enreg = App.recuperationRelation(id_etranger.Item1, TableRelationnelle, id_local.Item1,id_local.Item2, nomIdForeign);
+            foreach (MyDB.MyDB.IRecord Element in enreg)
+            {
+                for (int i = 0; i < Element.FieldCount; i++)
+                {
+                    DictAttributPivot.Add(Element.FieldName(i), Element[i]);
+                    
+                }
+            }
         }
 
         #endregion

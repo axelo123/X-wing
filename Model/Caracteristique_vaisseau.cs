@@ -32,14 +32,14 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int CVP(Carte_vaisseau_pilote cvp, int id_CV, int id)
+        public void CVP()
         {
-            return 1;
+            this.AddHasMany<Carte_vaisseau_pilote>();
         }
 
-        public int Action(Action action, int id_CV, int id)
+        public void Action()
         {
-            return 1;
+            //this.AddBelongsToMany<Action>();
         }
         public void Taille()
         {

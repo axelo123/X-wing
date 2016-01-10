@@ -26,6 +26,7 @@ namespace X_wing.Model
         public Carte_vaisseau_pilote(int id) : base(primaryKey, NomTable, id)
         {
             //Figurine figurine = Figurine();
+            this.TypeAmelioration();
         }
 
         #endregion
@@ -34,39 +35,41 @@ namespace X_wing.Model
 
 
 
-        //public Type_amelioration TypeAmelioration()
-        //{
-        //    return new Type_amelioration("type");
-        //}
-
-        //public Figurine Figurine()
-        //{
-        //    return this.hasOne<Figurine>("id_figurine", "id&quot");
-        //}
-
-        //public Faction Faction()
-        //{
-        //    return this.hasOne<Faction>("id_faction", "id&quot");
-        //}
-
-        public int Utilisateur(Utilisateur utilisateur, int id_CVP, int id)
+        public void TypeAmelioration()
         {
-            return 1;
+            this.AddBelongsToMany<Utilisateur>("carte_vaisseau_pilote-type_amelioration", "id_carte_vaisseau_pilote", "type_amelioration","id_type_amelioration");
+
         }
 
-        public int Escadron(Escadron escadron, int id_CVP, int id)
+        public void Figurine()
         {
-            return 1;
+            this.AddHasOne<Figurine>();
         }
 
-        //public Caracteristique_vaisseau Caracteristique_vaisseau()
-        //{
-        //    return this.hasOne<Caracteristique_vaisseau>("id_caracteristique_vaisseau", "id&quot");
-        //}
-        //public Nom_carte Carte()
-        //{
-        //    return this.hasOne<Nom_carte>("id_nom_carte", "id&quot");
-        //}
+        public void Faction()
+        {
+            this.AddHasOne<Faction>();
+        }
+
+        public void Utilisateur()
+        {
+
+            this.AddBelongsToMany<Utilisateur>("utilisateur-carte_vaisseau_pilote", "id_carte_vaisseau_pilote","id_utilisateur","id_utilisateur");
+        }
+
+        public void Escadron()
+        {
+            //this.AddBelongsToMany<Escadron>();
+        }
+
+        public void Caracteristique_vaisseau()
+        {
+             this.AddHasOne<Caracteristique_vaisseau>();
+        }
+        public void Carte()
+        {
+             this.AddHasOne<Nom_carte>();
+        }
         #endregion
     }
 }

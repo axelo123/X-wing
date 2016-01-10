@@ -94,6 +94,15 @@ namespace X_wing.Core
             set { this.m_BelongsToMany = value; }
         }
 
+        private int m_id;
+
+        public int id
+        {
+            get { return m_id; }
+            set { m_id = value; }
+        }
+        
+
         #endregion
 
         #region Constructor
@@ -111,7 +120,7 @@ namespace X_wing.Core
             m_BDD = App.BDD;
             m_Attributs = new Dictionary<string, object>();
             List<MyDB.MyDB.IRecord> enreg = App.recuperation(nomTable,primaryKey,id);
-
+            m_id = id;
             foreach (MyDB.MyDB.IRecord Element in enreg)
             {
                 for (int i = 0; i < Element.FieldCount; i++)
@@ -155,24 +164,13 @@ namespace X_wing.Core
         /// methode pour ajouter une liaison dans la liste belongsToMany
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        protected void AddBelongsToMany<T>() where T : ModelCore
+        protected void AddBelongsToMany<T>(string tableRelationnelle, string nomIdModelBase, string nomModelClasseLier, string nomIdForeign) where T : ModelCore
         {
-            T classeLier = (T)Activator.CreateInstance(typeof(T));
-            this.m_BelongsToMany.Add(classeLier as ModelCore);      
+            
+            Relation relation = new Core.Relation(tableRelationnelle, new Tuple<string,int>(nomIdModelBase, m_id), new Tuple<string, int>(nomModelClasseLier, m_id ),nomIdForeign);
+            
+            //this.m_BelongsToMany.Add(classeLier as ModelCore);      
         }
-        
-
-        // pour table relation
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="nomTableRelation"></param>
-        /// <returns></returns>
-        private List<Relation> Relations(string nomTableRelation)
-        {
-            return this.relations;
-        }
-
 
         #endregion
     }

@@ -48,7 +48,7 @@ namespace X_wing.Core
         public static List<MyDB.MyDB.IRecord> recuperation(string nomTable,string primaryKey, int id)
         {
             List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
-            string query = string.Format("SELECT * FROM {0} WHERE {1} = {2}", nomTable, primaryKey, id);
+            string query = string.Format("SELECT * FROM `{0}` WHERE `{1}` = {2}", nomTable, primaryKey, id);
 
             foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
             {
@@ -56,7 +56,20 @@ namespace X_wing.Core
             }
             return enreg;
         }
-
+        public static List<MyDB.MyDB.IRecord> recuperationRelation(string nomTableForeign, string nomTableRelation,string nomIdLocal, int idLocal, string nomIdForeign)
+        {
+            List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
+            
+            //enreg = recuperation(nomTableRelation, nomIdLocal, idLocal);
+            
+            string query = string.Format("SELECT {0} FROM `{1}` WHERE `{2}` = {3}", nomIdForeign, nomTableForeign, nomIdLocal, idLocal);
+            foreach (MyDB.MyDB.IRecord elem in BDD.Read(query))
+            {
+                enreg.Add(elem);
+            }
+            return enreg;
+        }
+            
         // cvp loc, fig foreign, id_fig idfor, 5 id local
         public static List<MyDB.MyDB.IRecord> Liaison_1a1(string nomTableLocal, string nomTableForeign, string idKeyForeign, int idLocal)
         {

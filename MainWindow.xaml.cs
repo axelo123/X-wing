@@ -51,7 +51,7 @@ namespace X_wing
             }
             */
 
-            Amelioration MyAmelioration = new Amelioration(1);
+            Carte_vaisseau_pilote Cvp = new Carte_vaisseau_pilote(1);
 
             
 

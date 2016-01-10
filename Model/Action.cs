@@ -33,9 +33,9 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int Utilisateur(Utilisateur utilisateur, int id_role, int id)
+        public void CaracteristiqueVaisseau()
         {
-            return 1;
+            //this.AddBelongsToMany<Caracteristique_vaisseau>();
         }
 
         #endregion
