@@ -10,3 +10,9 @@ C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\bin\Debug\MySq
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\obj\Debug\MyDB.csprojResolveAssemblyReference.cache
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\obj\Debug\MyDB.dll
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\obj\Debug\MyDB.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\bin\Debug\MyDB.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\bin\Debug\MyDB.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\bin\Debug\MySql.Data.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\obj\Debug\MyDB.csprojResolveAssemblyReference.cache
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\obj\Debug\MyDB.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\obj\Debug\MyDB.pdb

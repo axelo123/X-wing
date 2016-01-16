@@ -18,3 +18,23 @@ C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.csproj.GenerateR
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.exe
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.pdb
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\X-wing.exe.config
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.exe
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\X-wing.exe
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\X-wing.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\MyDB.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\MySql.Data.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\MyDB.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.csprojResolveAssemblyReference.cache
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\MainWindow.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\View\Test1.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\App.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing_MarkupCompile.cache
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing_MarkupCompile.lref
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\MainWindow.baml
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\View\Test1.baml
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.g.resources
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X_wing.Properties.Resources.resources
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.csproj.GenerateResource.Cache

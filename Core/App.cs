@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MyDB;
 
+
 namespace X_wing.Core
 {
     /// <summary>
@@ -12,9 +13,12 @@ namespace X_wing.Core
     /// </summary>
     public static class App
     {
-        #region Members
+        private static Config s_config;
+        public static Config config { get { return s_config; } }
 
-        public static MyDB.MyDB BDD = new MyDB.MyDB("x_wing", "b5NmmVrLM8VGL4dx", "x_wing", "localhost");
+        #region Members
+        private static MyDB.MyDB  s_BDD;
+        public static MyDB.MyDB BDD { get { return s_BDD; } }
 
         #endregion
 
@@ -36,7 +40,9 @@ namespace X_wing.Core
         /// </summary>
         public static void ConnecterBD()
         {
-            BDD.Connect();
+            s_config = new Config();
+            s_BDD = new MyDB.MyDB(config.username, config.password, config.bdd, config.server);
+            s_BDD.Connect();
         }
         /// <summary>
         /// récuperation d'un enregistrement

@@ -11,7 +11,7 @@ namespace X_wing.Model
     {
         #region Members
 
-        static string NomTable = "amelioration";
+        static new string NomTable = "amelioration";
         static string primaryKey = "id";
         #endregion
 
@@ -22,6 +22,10 @@ namespace X_wing.Model
         #endregion
 
         #region Constructor
+        public Amelioration() : base(primaryKey, NomTable, 1)
+        {
+
+        }
 
         public Amelioration(int id) :base(primaryKey, NomTable, id)
         {

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using X_wing.View;
 using X_wing.Model;
+using System.Diagnostics;
 
 namespace X_wing
 {
@@ -28,6 +29,10 @@ namespace X_wing
             Test1 win2 = new Test1();
 
             Core.App.ConnecterBD();
+            Core.App.BDD.onQuery += (s, e) =>
+            {
+                Console.WriteLine(e.log() + "\n");
+            };
 
             /*
             List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
@@ -52,8 +57,6 @@ namespace X_wing
             */
 
             Carte_vaisseau_pilote Cvp = new Carte_vaisseau_pilote(1);
-
-            
 
 
             win2.Show();

@@ -11,7 +11,7 @@ namespace X_wing.Model
     {
         #region Members
 
-        static string NomTable = "utilisateur";
+        static new string NomTable = "utilisateur";
         static string primaryKey = "id";
         #endregion
 

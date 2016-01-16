@@ -10,11 +10,31 @@ using System.Globalization;
 
 namespace MyDB
 {
+
+
     /// <summary>
     /// Permet d'avoir un accès à une base de données MySQL
     /// </summary>
     public partial class MyDB
     {
+
+        //Event & EventArgs queryRequest
+        public event EventHandler<QueryEventArgs> onQuery=null;
+        public class QueryEventArgs : EventArgs
+        {
+            public string query { get; set; }
+            public DateTime date { get; set; }
+            public QueryEventArgs(string m)
+            {
+                this.query = m;
+                this.date = DateTime.Now;
+            }
+            public string log()
+            {
+                return this.date.ToString("HH:mm") + ":" + query;
+            }
+        }
+
         /// <summary>
         /// Interface publique de classe permettant d'informer de la réussite ou de l'échec d'une requête de consultation, avec le nombre d'enregistrements consultés et un indicateur précisant si tous les enregistrements ont pu être pris en compte par la boucle de lecture ou si l'appelant de la méthode de consultation y a mis fin prématurément
         /// </summary>
@@ -323,6 +343,7 @@ namespace MyDB
                 {
                     if (Record == null)
                     {
+                        if (onQuery != null) onQuery(this, new QueryEventArgs(Query));
                         Command = new MySqlCommand(Query, m_Connection);
                         MySqlRecord = Command.ExecuteReader();
                         Record = new Record(Result);

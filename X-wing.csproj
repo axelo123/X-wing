@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\BelongsToMany.cs" />
+    <None Include="ENV.ini" />
+    <Compile Include="Core\Config.cs" />
     <Compile Include="View\Test1.xaml.cs">
       <DependentUpon>Test1.xaml</DependentUpon>
     </Compile>

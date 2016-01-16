@@ -20,7 +20,7 @@ namespace X_wing.Core
         protected List<Relation> relations;
         protected List<ModelCore> m_HasOne;
         protected List<ModelCore> m_HasMany;
-        protected List<ModelCore> m_BelongsToMany;
+        protected Dictionary<string, List<ModelCore>> m_BelongsToMany;
 
 
 
@@ -43,7 +43,7 @@ namespace X_wing.Core
         {
             get { return this.m_Attributs; }
             set { this.m_Attributs = value; }
-       
+
         }
         /// <summary>
         /// nom de la cle primaire de la table
@@ -88,7 +88,7 @@ namespace X_wing.Core
         /// <summary>
         /// liste des tables avec liaisons n a n
         /// </summary>
-        public List<ModelCore> BelongsToMany
+        public Dictionary<string, List<ModelCore>> BelongsToMany
         {
             get { return this.m_BelongsToMany; }
             set { this.m_BelongsToMany = value; }
@@ -101,7 +101,7 @@ namespace X_wing.Core
             get { return m_id; }
             set { m_id = value; }
         }
-        
+
 
         #endregion
 
@@ -119,7 +119,7 @@ namespace X_wing.Core
             m_NomTable = nomTable;
             m_BDD = App.BDD;
             m_Attributs = new Dictionary<string, object>();
-            List<MyDB.MyDB.IRecord> enreg = App.recuperation(nomTable,primaryKey,id);
+            List<MyDB.MyDB.IRecord> enreg = App.recuperation(nomTable, primaryKey, id);
             m_id = id;
             foreach (MyDB.MyDB.IRecord Element in enreg)
             {
@@ -132,7 +132,7 @@ namespace X_wing.Core
             relations = new List<Relation>();
             m_HasOne = new List<ModelCore>();
             m_HasMany = new List<ModelCore>();
-            m_BelongsToMany = new List<ModelCore>();
+            m_BelongsToMany = new Dictionary<string, List<ModelCore>>();
         }
 
         #endregion
@@ -166,10 +166,16 @@ namespace X_wing.Core
         /// <typeparam name="T"></typeparam>
         protected void AddBelongsToMany<T>(string tableRelationnelle, string nomIdModelBase, string nomModelClasseLier, string nomIdForeign) where T : ModelCore
         {
-            
-            Relation relation = new Core.Relation(tableRelationnelle, new Tuple<string,int>(nomIdModelBase, m_id), new Tuple<string, int>(nomModelClasseLier, m_id ),nomIdForeign);
-            
+
+            //Relation relation = new Core.Relation(tableRelationnelle, new Tuple<string, int>(nomIdModelBase, m_id), new Tuple<string, int>(nomModelClasseLier, m_id), nomIdForeign);
             //this.m_BelongsToMany.Add(classeLier as ModelCore);      
+        }
+
+        protected void TestBelongsToMany<T>(string tableRelationnelle, string nomIdModelBase, string nomIdForeign) where T : ModelCore
+        {
+
+            BelongsToMany BTM = new Core.BelongsToMany(this, typeof(T), tableRelationnelle, nomIdForeign, nomIdModelBase);
+            this.m_BelongsToMany = BTM.results;
         }
 
         #endregion

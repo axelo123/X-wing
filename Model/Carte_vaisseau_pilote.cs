@@ -11,7 +11,7 @@ namespace X_wing.Model
     {
         #region Members
 
-        static string NomTable = "carte_vaisseau_pilote";
+        static new string NomTable = "carte_vaisseau_pilote";
         static string primaryKey = "id";
         #endregion
 
@@ -37,7 +37,7 @@ namespace X_wing.Model
 
         public void TypeAmelioration()
         {
-            this.AddBelongsToMany<Utilisateur>("carte_vaisseau_pilote-type_amelioration", "id_carte_vaisseau_pilote", "type_amelioration","id_type_amelioration");
+            this.TestBelongsToMany<Amelioration>("carte_vaisseau_pilote-type_amelioration", "id_type_amelioration", "id_carte_vaisseau_pilote" );
 
         }
 
