@@ -32,9 +32,9 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int Amelioration(Amelioration amelioration, int id_ECVP, int id)
+        public void Amelioration()
         {
-            return 1;
+            this.AddBelongsToMany<Amelioration>("escadron-carte_vaisseau_pilote-amelioration","id_amelioration","id_carte_vaisseau_pilote");
         }
 
         #endregion

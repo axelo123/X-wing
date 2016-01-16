@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
+using MyDbLib;
 
 namespace X_wing.Core
 {
@@ -74,11 +75,11 @@ namespace X_wing.Core
             m_otherKey = otherKey;
 
             //recuperation des id des modèles liés au model qui a appellé cette methode
-            List<MyDB.MyDB.IRecord> records=App.recuperation(table, foreignKey, ModelBase.id);
+         
             //On liste les résults
             List<ModelCore> resultats = new List<ModelCore>();
             //Pour chaque résultats
-            foreach (MyDB.MyDB.IRecord record in records)
+            foreach (MyDB.IRecord record in App.recuperation(table, foreignKey, ModelBase.id))
             {
                 //On créée l'instance du modèle que l'on a passé en paramètre
                 var ModelALier = Activator.CreateInstance(TypeModelALier, new object[] { Int32.Parse(record[otherKey].ToString()) });

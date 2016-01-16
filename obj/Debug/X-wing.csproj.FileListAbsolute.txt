@@ -7,9 +7,7 @@ C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing_MarkupCompile.ca
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing_MarkupCompile.lref
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\X-wing.exe
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\X-wing.pdb
-C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\MyDB.dll
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\MySql.Data.dll
-C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\MyDB.pdb
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\MainWindow.baml
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\View\Test1.baml
 C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.g.resources
@@ -38,3 +36,4 @@ C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\View\Test1.b
 C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.g.resources
 C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X_wing.Properties.Resources.resources
 C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.csproj.GenerateResource.Cache
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\MyDbLib.dll

@@ -23,10 +23,8 @@ namespace X_wing.Model
 
         #region Constructor
 
-        public Carte_vaisseau_pilote(int id) : base(primaryKey, NomTable, id)
+        public Carte_vaisseau_pilote(int id, params string[] arguments) : base(primaryKey, NomTable, id)
         {
-            //Figurine figurine = Figurine();
-            this.TypeAmelioration();
         }
 
         #endregion
@@ -37,7 +35,7 @@ namespace X_wing.Model
 
         public void TypeAmelioration()
         {
-            this.TestBelongsToMany<Amelioration>("carte_vaisseau_pilote-type_amelioration", "id_type_amelioration", "id_carte_vaisseau_pilote" );
+            this.AddBelongsToMany<Amelioration>("carte_vaisseau_pilote-type_amelioration", "id_type_amelioration", "id_carte_vaisseau_pilote" );
 
         }
 
@@ -54,7 +52,7 @@ namespace X_wing.Model
         public void Utilisateur()
         {
 
-            this.AddBelongsToMany<Utilisateur>("utilisateur-carte_vaisseau_pilote", "id_carte_vaisseau_pilote","id_utilisateur","id_utilisateur");
+            this.AddBelongsToMany<Utilisateur>("utilisateur-carte_vaisseau_pilote","id_utilisateur","id_carte_vaisseau_pilote");
         }
 
         public void Escadron()
@@ -64,7 +62,7 @@ namespace X_wing.Model
 
         public void Caracteristique_vaisseau()
         {
-             this.AddHasOne<Caracteristique_vaisseau>();
+             this.AddHasMany<Caracteristique_vaisseau>();
         }
         public void Carte()
         {

@@ -39,7 +39,7 @@ namespace X_wing.Model
 
         public void Action()
         {
-            //this.AddBelongsToMany<Action>();
+            this.AddBelongsToMany<Action>("action - caracteristique_vaisseau","id_action", "id_caracteristique_vaisseau");
         }
         public void Taille()
         {

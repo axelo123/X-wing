@@ -35,7 +35,7 @@ namespace X_wing.Model
 
         public void CaracteristiqueVaisseau()
         {
-            //this.AddBelongsToMany<Caracteristique_vaisseau>();
+            this.AddBelongsToMany<Caracteristique_vaisseau>("action-caracteristique_vaisseau", "id_caracteristique_vaisseau","id-action");
         }
 
         #endregion

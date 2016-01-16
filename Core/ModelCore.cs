@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyDbLib;
+using System.Reflection;
 
 namespace X_wing.Core
 {
@@ -16,8 +18,8 @@ namespace X_wing.Core
         protected string m_NomTable;
         protected Dictionary<string, object> m_Attributs;
         private string m_PrimaryKey;
-        private MyDB.MyDB m_BDD;
-        protected List<Relation> relations;
+        private MyDB m_BDD;
+        protected Dictionary<string, List<ModelCore>> relations;
         protected List<ModelCore> m_HasOne;
         protected List<ModelCore> m_HasMany;
         protected Dictionary<string, List<ModelCore>> m_BelongsToMany;
@@ -56,7 +58,7 @@ namespace X_wing.Core
         /// <summary>
         /// reference de la DB
         /// </summary>
-        public MyDB.MyDB BDD
+        public MyDB BDD
         {
             get { return this.m_BDD; }
             set { this.m_BDD = value; }
@@ -64,7 +66,7 @@ namespace X_wing.Core
         /// <summary>
         /// Liste des relations de la table
         /// </summary>
-        public List<Relation> Relation
+        public Dictionary<string, List<ModelCore>> Relation
         {
             get { return this.relations; }
             set { this.relations = value; }
@@ -113,15 +115,15 @@ namespace X_wing.Core
         /// <param name="nomTable">nom de la table a instancier</param>
         /// <param name="id">valeur de la cle primaire</param>
         /// <param name="hydrate">true si c'est le premier passage pour l'instance de l'objet</param>
-        protected ModelCore(string primaryKey, string nomTable, int id, bool hydrate = true)
+        protected ModelCore(string primaryKey, string nomTable, int id, params string[] arguments)
         {
             m_PrimaryKey = primaryKey;
             m_NomTable = nomTable;
             m_BDD = App.BDD;
             m_Attributs = new Dictionary<string, object>();
-            List<MyDB.MyDB.IRecord> enreg = App.recuperation(nomTable, primaryKey, id);
+            IEnumerable<MyDB.IRecord> enreg = App.recuperation(nomTable, primaryKey, id);
             m_id = id;
-            foreach (MyDB.MyDB.IRecord Element in enreg)
+            foreach (MyDB.IRecord Element in enreg)
             {
                 for (int i = 0; i < Element.FieldCount; i++)
                 {
@@ -129,10 +131,17 @@ namespace X_wing.Core
                 }
             }
 
-            relations = new List<Relation>();
+            relations = new Dictionary<string, List<ModelCore>>();
             m_HasOne = new List<ModelCore>();
             m_HasMany = new List<ModelCore>();
             m_BelongsToMany = new Dictionary<string, List<ModelCore>>();
+
+            foreach(string methName in arguments)
+            {
+                Type typeEnfant = this.GetType();
+                MethodInfo theMethod = typeEnfant.GetMethod(methName);
+                theMethod.Invoke(this, new object[] { });
+            }
         }
 
         #endregion
@@ -164,18 +173,12 @@ namespace X_wing.Core
         /// methode pour ajouter une liaison dans la liste belongsToMany
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        protected void AddBelongsToMany<T>(string tableRelationnelle, string nomIdModelBase, string nomModelClasseLier, string nomIdForeign) where T : ModelCore
-        {
 
-            //Relation relation = new Core.Relation(tableRelationnelle, new Tuple<string, int>(nomIdModelBase, m_id), new Tuple<string, int>(nomModelClasseLier, m_id), nomIdForeign);
-            //this.m_BelongsToMany.Add(classeLier as ModelCore);      
-        }
-
-        protected void TestBelongsToMany<T>(string tableRelationnelle, string nomIdModelBase, string nomIdForeign) where T : ModelCore
+        protected void AddBelongsToMany<T>(string tableRelationnelle, string nomIdModelBase, string nomIdForeign) where T : ModelCore
         {
 
             BelongsToMany BTM = new Core.BelongsToMany(this, typeof(T), tableRelationnelle, nomIdForeign, nomIdModelBase);
-            this.m_BelongsToMany = BTM.results;
+            this.Relation = BTM.results;
         }
 
         #endregion

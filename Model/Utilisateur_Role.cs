@@ -32,9 +32,9 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int Escadron(Escadron escadron, int id_UR, int id)
+        public void Escadron()
         {
-            return 1;
+            this.AddHasMany<Escadron>();
         }
 
         #endregion

@@ -32,14 +32,14 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int Utilisateur_Role(Utilisateur_Role UR, int id_escadron, int id)
+        public void Utilisateur_Role()
         {
-            return 1;
+            this.AddHasOne<Utilisateur_Role>();
         }
 
-        public int Carte_vaisseau_pilote(Carte_vaisseau_pilote CVP, int id_escadron, int id)
+        public void Carte_vaisseau_pilote()
         {
-            return 1;
+            this.AddBelongsToMany<Carte_vaisseau_pilote>("escadron-carte_vaisseau_pilote","id_carte_vaisseau_pilote","id_escadron");
         }
 
         #endregion

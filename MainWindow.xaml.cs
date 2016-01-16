@@ -29,34 +29,9 @@ namespace X_wing
             Test1 win2 = new Test1();
 
             Core.App.ConnecterBD();
-            Core.App.BDD.onQuery += (s, e) =>
-            {
-                Console.WriteLine(e.log() + "\n");
-            };
 
-            /*
-            List<MyDB.MyDB.IRecord> enreg = new List<MyDB.MyDB.IRecord>();
-            string query = string.Format("SELECT * FROM {0} WHERE {1} = {2}", "amelioration", "id", 1);
 
-            foreach (MyDB.MyDB.IRecord elem in Core.App.BDD.Read(query))
-            {
-                enreg.Add(elem);
-            }
-
-            // Remplir win2 via l'enregistrement existant
-            foreach (MyDB.MyDB.IRecord Element in enreg)
-            {
-                for (int i = 0; i < Element.FieldCount; i++)
-                {
-                    // Liste des valeurs des champs
-                    //win2.listView.Items.Add(Element[i]);
-                    // Liste des noms des champs
-                    win2.listView.Items.Add(Element.FieldName(i));
-                }
-            }
-            */
-
-            Carte_vaisseau_pilote Cvp = new Carte_vaisseau_pilote(1);
+            Carte_vaisseau_pilote Cvp = new Carte_vaisseau_pilote(1,"TypeAmelioration");
 
 
             win2.Show();

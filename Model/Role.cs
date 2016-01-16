@@ -32,9 +32,9 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int Utilisateur(Utilisateur utilisateur, int id_role, int id)
+        public void Utilisateur()
         {
-            return 1;
+            this.AddBelongsToMany<Utilisateur>("utilisateur-role","id_utilisateur","id_role");
         }
 
         #endregion

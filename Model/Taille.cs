@@ -17,5 +17,15 @@ namespace X_wing.Model
 
         }
 
+        public void Caracteristique_vaisseau ()
+        {
+            this.AddHasMany<Caracteristique_vaisseau>();
+        }
+
+        public void Amelioration()
+        {
+            this.AddHasMany<Amelioration>();
+        }
+
     }
 }

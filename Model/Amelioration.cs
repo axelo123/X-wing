@@ -38,7 +38,7 @@ namespace X_wing.Model
 
         public void Faction(Faction faction, int id_amelioration, int id)
         {
-            //this.AddBelongsToMany<Faction>();
+            this.AddHasOne<Faction>();
         }
         
         public void NomCarte()
@@ -51,13 +51,17 @@ namespace X_wing.Model
         }
         public void EscadronCarteVaisseauPilote()
         {
-           // this.AddBelongsToMany<Escadron_Carte_vaisseau_pilote>();
+            this.AddBelongsToMany<Escadron_Carte_vaisseau_pilote>("escadron-carte_vaisseau_pilote-amelioration", "id_escadron_carte_vaisseau_pilote","id_amelioration");
         }
         public void Utilisateur()
         {
-            this.AddBelongsToMany<Utilisateur>("utilisateur-amelioration", "id_amelioration", "id_utilisateur", "id_utilisateur");
+            this.AddBelongsToMany<Utilisateur>("utilisateur-amelioration","id_utilisateur","id_amelioration");
         }
-        public void Taille()
+        public void TailleMin()
+        {
+            this.AddHasOne<Taille>();
+        }
+        public void TailleMax()
         {
             this.AddHasOne<Taille>();
         }

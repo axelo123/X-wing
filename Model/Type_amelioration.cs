@@ -32,15 +32,16 @@ namespace X_wing.Model
 
         #region Methods
 
-        public int Carte_vaisseau_pilote(Carte_vaisseau_pilote CVP, int id_TA, int id)
+        public void Carte_vaisseau_pilote()
         {
-            return 1;
+            this.AddBelongsToMany<Carte_vaisseau_pilote>("carte_vaisseau_pilote-type_amelioration","id_carte_vaisseau_pilote","id_type_amelioration");
         }
 
-        public int Amelioration(Amelioration amelioration, int id_TA, int id)
+        public void Amelioration()
         {
-            return 1;
+            this.AddHasMany<Amelioration>();
         }
+      
 
         #endregion
     }
