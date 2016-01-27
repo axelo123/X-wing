@@ -25,3 +25,6 @@ C:\Users\Sylvain\Documents\Visual Studio 2015\Projects\AjoutCarte\AjoutCarte\obj
 C:\Users\Sylvain\Documents\Visual Studio 2015\Projects\AjoutCarte\AjoutCarte\obj\Debug\action.baml
 C:\Users\Sylvain\Documents\Visual Studio 2015\Projects\AjoutCarte\AjoutCarte\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Sylvain\Documents\Visual Studio 2015\Projects\AjoutCarte\AjoutCarte\obj\Debug\AjoutCarte.csprojResolveAssemblyReference.cache
+E:\CloneGit\X-wing\AjoutCarte\AjoutCarte\bin\Debug\AjoutCarte.exe.config
+E:\CloneGit\X-wing\AjoutCarte\AjoutCarte\obj\Debug\AjoutCarte.exe
+E:\CloneGit\X-wing\AjoutCarte\AjoutCarte\obj\Debug\AjoutCarte.pdb

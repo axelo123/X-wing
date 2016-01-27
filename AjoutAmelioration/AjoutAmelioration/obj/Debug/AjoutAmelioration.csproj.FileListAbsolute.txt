@@ -11,3 +11,6 @@ c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAm
 c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.csproj.GenerateResource.Cache
 c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.exe
 c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.pdb
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.exe.config
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.exe
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.pdb
