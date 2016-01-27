@@ -1,0 +1,11 @@
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\bin\Debug\TestsBis.exe.config
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\bin\Debug\TestsBis.exe
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\bin\Debug\TestsBis.pdb
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\bin\Debug\MyDbLib.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\bin\Debug\MySql.Data.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.csprojResolveAssemblyReference.cache
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.Properties.Resources.resources
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.csproj.GenerateResource.Cache
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.exe
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.pdb
+C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\Tests.Test.resources

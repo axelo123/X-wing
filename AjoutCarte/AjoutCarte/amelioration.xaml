@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="AjoutCarte.amelioration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AjoutCarte"
+             mc:Ignorable="d" 
+             d:DesignHeight="159.895" d:DesignWidth="391.064">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Label x:Name="label" Content="Améliorations :" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button" Content="">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Astromech.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button1" Content="" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Bomb.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button2" Content="" Grid.Column="2">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Cargo.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button3" Content="" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Missiles.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4" Content="" Grid.Column="1" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Sensor.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy" Content="" Grid.Column="2" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Team.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy1" Content="" Grid.Column="3" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Torpedoes.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy2" Content="" Grid.Column="4" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Turret Upgrade.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy3" Content="" Grid.Column="3">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Crew.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy4" Content="" Grid.Column="4">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Elite Upgrade.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button5" Content="" Grid.Column="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/hardpoint.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button5_Copy" Content="" Grid.Column="5" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/croix.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button5_Copy1" Content="" Grid.Column="6">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Laser Cannon.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1012 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<link href='http://ressources.atelierdufaucon.com/favicon.ico' rel='icon' type='image/x-icon'/>
+
+		<title>Pilot Card Creator - X-wing miniature - Atelier du Faucon</title>
+	
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="js/html2canvas.min.js"></script>
+		<script src="js/draggable_background.js"></script>
+		<script src="js/jquery.html5Loader.circular.js"></script>
+		<script src="js/jquery.html5Loader.min.js"></script>
+		<script src="js/jquery.ui.editableText.js"></script>
+		<script src="js/attrchange.js"></script>
+		<script src="js/swfobject.js"></script>
+		<script src="js/swfZoomDetection.js"></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/script.js"></script>
+			<!--
+		
+		<script src="js/compiled-script.js"></script>
+	-->			
+		<script src="http://ressources.atelierdufaucon.com/bar.js"></script>
+		<link rel="stylesheet" href="css/dark-hive/jquery-ui-1.10.4.custom.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+	<div id="FAUCON_prep" style="height: 48px; background-color: black;"></div>
+	<div id="html5Loader"></div>
+	<div id="wrapper">
+		<div id="body">
+			<div id="design_left">
+				<a id="version_show" class="text">v XXX.XX</a>
+				<div id="design_left_savebox">
+					<button id="undo">
+						<img class="button_icon" src="./css/images/undo.png"/>
+						undo
+					</button>
+					<button id="redo">
+						<img class="button_icon" src="./css/images/redo.png"/>
+						redo
+					</button>
+					<button id="enregistrer">
+						<img class="button_icon" src="./css/images/printer.png"/>
+						Enregistrer sous ...
+					</button>
+					<button id="enregistrer_hide">
+						<span class="nowrap">
+							<img class="button_icon" src="./css/images/printer.png"/>
+							Preparation en cours ...
+						</span>
+					</button>
+					<br>
+					<button id="report_bug">
+						<img class="button_icon" src="./css/images/bug.png"/>
+						Rapporter un bug
+					</button>	
+					<button id="resetall">
+						<img class="button_icon" src="./css/images/reset.png"/>
+						Remise à zéro
+					</button>			
+				</div>
+				<div id="design_left_permalink">
+					<span class="text">Code Permalien : </span><input  type="text" id="permalink">
+					<br>					
+					<input type="submit" id="load" value="Charger">
+					- <input type="submit" id="shorten" value="Raccourcir :">
+					<input type="text" id="shortlink" readonly>
+				</div>
+				
+				<div id="design_bloc_liens">
+					<span class="text">Template de vaisseau prédéfinis :</span>
+					<ul>
+						<li>
+							<a href="#p2a3d2c3b2oFTixwing£uPAsX-wing£m00131111101121100222000£" >X-wing</a>
+						</li>
+						- <li>
+							<a href="#p2a2d1c5b3oFTiywing£uTPPAsY-wing£m00333111301121100121000£" >Y-wing</a>
+						</li>
+						- <li>
+							<a href="#w2p5a3d1c8b5oFTifaucon£uEMCCsYT-1300£gm00130111031121101222100£" >Faucon</a>
+						</li>
+						&nbsp;&nbsp;<li>
+							<a href="#w2p1a2d1c6b4oFTifaucon£uCCsYT-1300£gm00130111031121101222100£" >(VP1)</a>
+						</li>
+						- <li>
+							<a href="#p1a2d3c2b2oFTBEiawing£uMsA-wing£m23201121132222201000100£" >A-wing</a>
+						</li>
+						- <li>
+							<a href="#p2a3d1c3b5oFTRibwing£uSLPPsB-wing£m00300313001121133222300£" >B-wing</a>
+						</li>
+						- <li>
+							<a href="#p2a1d2c4b1oFTihwk£uTCsHWK-290£m00300313001121100222000£" >HWK-290</a>
+						</li>
+						<br>
+						<li>
+							<a href="#p1a2d3c3eoFREitief£sChasseur&sp;TIE£m10131121131222101000100£" >Tie Fighter</a>
+						</li>
+						- <li>
+							<a href="#p2a2d3c3b2eoFTREitiea£uMsTIE&sp;Advanced£m10131121101121100202000£" >Tie Advanced</a>
+						</li>
+						- <li>
+							<a href="#w1p3a3d2c6b4eoFTEislave£uLBMCsFirespray-31£gm00131111131121100222000£" >Slave-1</a>
+						</li>
+						- <li>
+							<a href="#p1a3d3c3eoFRBEitiei£sIntercepteur&sp;TIE£m13201121132222201000100£" >Tie Interceptor</a>
+						</li>
+						- <li>
+							<a href="#p2a2d2c6eoFTRitieb£uBMMPPsBombardier&sp;TIE£m03101121103222300121000£" >Tie Bomber</a>
+						</li>
+						- <li>
+							<a href="#p2a3d1c5b5eoFTilambda£uSLCCsNavette&sp;de&sp;classe&sp;Lambda£l1gm00000313003121300222003£" >Lambda</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div id="radio_faction"> 
+					<span class="text">Faction :</span>
+					<input type="radio" id="faction_rebel" name="faction" checked>
+					<label for="faction_rebel">Rebelles</label>
+					<input type="radio" id="faction_empire" name="faction">
+					<label for="faction_empire">Empire</label>
+					<input type="radio" id="faction_debug" name="faction">
+					<label for="faction_debug" id="label_faction_debug">Debug</label>
+				</div>
+				
+				<div id="checkbox_unique">
+					<span class="text">Nom pilote :</span>
+					<input type="checkbox" id="unique">
+					<label for="unique">• unique</label>
+					<input type="submit" id="quote" value="“quote”">
+					<input type="submit" id="unquote" value="unquote">
+				</div>
+				
+				<div id="design_bloc_shiptextsize">
+					<span class="text"> Taille du nom du vaisseau : </span>
+					<div class="stats_sliders" id="shiptextsize_sliders"></div>
+				</div>
+				
+				<div id="stats_panel">
+					<img src="images/icons/vp.png"> 
+					<input class="input_stats" readonly type="text" id="stats_vp"> 
+					<div class="stats_sliders" id="slider_vp"></div>
+					
+					<br>
+					
+					<span class="text">Tir :</span> <div id="fire_arc">
+						<input type="radio" name="fire_arc" id="arc_none" checked>
+						<label for="arc_none">normal</label>
+						<input type="radio" name="fire_arc" id="arc_avar">
+						<label for="arc_avar">Av/Ar</label>
+						<input type="radio" name="fire_arc" id="arc_360">
+						<label for="arc_360">360°</label>
+					</div>
+					
+					<br>
+					
+					<img src="images/icons/att.png"> 
+					<input class="input_stats" readonly type="text" id="stats_att"> 
+					<div class="stats_sliders" id="slider_att"></div>
+					
+					<br>
+					
+					<img src="images/icons/def.png"> 
+					<input class="input_stats" readonly type="text" id="stats_def"> 
+					<div class="stats_sliders" id="slider_def"></div><br>
+					
+					<img src="images/icons/hull.png"> 
+					<input readonly type="text" class="input_stats" id="stats_hull"> 
+					<div class="stats_sliders" id="slider_hull"></div><br>
+					
+					<img src="images/icons/shields.png"> 
+					<input class="input_stats" readonly type="text" id="stats_shields"> 
+					<div class="stats_sliders" id="slider_shields"></div>
+				</div>
+				<div id="radio_ship_icon">				
+					<span>
+						<span class="text">&nbsp;&nbsp;Vague 1 : </span>
+						<input type="radio" id="ship_xwing" name="ship_icon">
+						<label for="ship_xwing"><img src="images/ships/xwing.png"></label>
+						
+						<input type="radio" id="ship_ywing" name="ship_icon">
+						<label for="ship_ywing"><img src="images/ships/ywing.png"></label>
+						
+						<input type="radio" id="ship_tief" name="ship_icon">
+						<label for="ship_tief"><img src="images/ships/tief.png"></label>
+						
+						<input type="radio" id="ship_tiea" name="ship_icon">
+						<label for="ship_tiea"><img src="images/ships/tiea.png"></label>
+					</span>
+					
+					<span class="nowrap">
+						<span class="text">&nbsp;&nbsp;Vague 2 : </span>
+						<input type="radio" id="ship_faucon" name="ship_icon">
+						<label for="ship_faucon"><img src="images/ships/faucon.png"></label>
+						
+						<input type="radio" id="ship_awing" name="ship_icon">
+						<label for="ship_awing"><img src="images/ships/awing.png"></label>
+						
+						<input type="radio" id="ship_slave" name="ship_icon">
+						<label for="ship_slave"><img src="images/ships/slave.png"></label>
+						
+						<input type="radio" id="ship_tiei" name="ship_icon">
+						<label for="ship_tiei"><img src="images/ships/tiei.png"></label>
+					</span>
+					
+					<br>
+					<span>
+						<span class="text">&nbsp;&nbsp;Vague 3 : </span>
+						<input type="radio" id="ship_bwing" name="ship_icon">
+						<label for="ship_bwing"><img src="images/ships/bwing.png"></label>
+						
+						<input type="radio" id="ship_hwk" name="ship_icon">
+						<label for="ship_hwk"><img src="images/ships/hwk.png"></label>
+						
+						<input type="radio" id="ship_lambda" name="ship_icon">
+						<label for="ship_lambda"><img src="images/ships/lambda.png"></label>
+						
+						<input type="radio" id="ship_tieb" name="ship_icon">
+						<label for="ship_tieb"><img src="images/ships/tieb.png"></label>
+					</span>
+					
+					<span class="nowrap">
+						<span class="text">&nbsp;&nbsp;Vague 4 : </span>
+						<input type="radio" id="ship_ewing" name="ship_icon">
+						<label for="ship_ewing"><img src="images/ships/ewing.png"></label>
+						
+						<input type="radio" id="ship_z95" name="ship_icon">
+						<label for="ship_z95"><img src="images/ships/z95.png"></label>
+						
+						<input type="radio" id="ship_tiep" name="ship_icon">
+						<label for="ship_tiep"><img src="images/ships/tiep.png"></label>
+						
+						<input type="radio" id="ship_tied" name="ship_icon">
+						<label for="ship_tied"><img src="images/ships/tied.png"></label>
+					</span>
+					
+					<br>
+					<span>
+						<span class="text">&nbsp;&nbsp;Vague épique : </span>
+						<input type="radio" id="ship_gr75" name="ship_icon">
+						<label for="ship_gr75"><img src="images/ships/gr75.png"></label>
+						
+						<input type="radio" id="ship_cr90" name="ship_icon">
+						<label for="ship_cr90"><img src="images/ships/cr90.png"></label>
+						
+						<span class="nowrap">
+							<span class="text">&nbsp;&nbsp;Others : </span>
+							<input type="radio" id="ship_yt2000" name="ship_icon">
+							<label for="ship_yt2000"><img src="images/ships/yt2000.png"></label>
+						</span>
+						
+						<span class="nowrap">
+							<span class="text">&nbsp;&nbsp;Reset : </span>
+							<input type="radio" id="ship_none" name="ship_icon" checked="checked">
+							<label for="ship_none">Aucun</label>
+						</span>
+					</span>
+				</div>
+				<br>
+				<a class="text" target="_blank" href="mailto:oopinou@gmail.com">Suggérer une icone ...</a>
+				
+			</div>
+			<div id="design_center">
+				<div id="master">
+					<div id="upload" class="upload_init"><img src=""><span id="upload_info"><span>Cliquer et maintenir pour faire glisser le fond</span></span></div>
+					<div id="result_background">
+						<div id="result">
+							<div id="result_pilot_name">Nouveau Pilote</div>
+							
+							<div id="result_vp"><img src=""></div>
+							
+							<div id="result_ship">Vaisseau</div>
+							<div id="result_text">
+								<span class="nowrap">
+									<span id="result_text_size_control">
+									<div id="result_text_content" class="result_text_power"></div>
+									<span>
+									<div id="sizer"></div>
+								<span>
+							</div>
+							
+							
+							<div id="result_att"><img src=""></div>
+							<div id="result_def"><img src=""></div>
+							<div id="result_hull"><img src=""></div>
+							<div id="result_shields"><img src=""></div>
+									
+							<div id="result_actions">
+								<img id="img_a_focus" alt="F" src="images/actions/focus.png">
+								<img id="img_a_lock" alt="T" src="images/actions/lock.png">
+								<img id="img_a_roll" alt="R"  src="images/actions/roll.png">
+								<img id="img_a_boost" alt="B" src="images/actions/boost.png">
+								<img id="img_a_evade" alt="E" src="images/actions/evade.png">
+							</div>
+							
+							<div id="result_ships_icon">
+								<img id="img_ship_xwing" src="images/ships/xwing.png">
+								<img id="img_ship_ywing" src="images/ships/ywing.png">
+								<img id="img_ship_faucon" src="images/ships/faucon.png">
+								<img id="img_ship_awing" src="images/ships/awing.png">
+								<img id="img_ship_hwk" src="images/ships/hwk.png">
+								<img id="img_ship_bwing" src="images/ships/bwing.png">
+								<img id="img_ship_ewing" src="images/ships/ewing.png">
+								<img id="img_ship_z95" src="images/ships/z95.png">
+								
+								<img id="img_ship_gr75" src="images/ships/gr75.png">
+								<img id="img_ship_cr90" src="images/ships/cr90.png">
+								
+								<img id="img_ship_tief" src="images/ships/tief.png">
+								<img id="img_ship_tiea" src="images/ships/tiea.png">
+								<img id="img_ship_slave" src="images/ships/slave.png">
+								<img id="img_ship_tiei" src="images/ships/tiei.png">
+								<img id="img_ship_lambda" src="images/ships/lambda.png">
+								<img id="img_ship_tieb" src="images/ships/tieb.png">
+								<img id="img_ship_tiep" src="images/ships/tiep.png">
+								<img id="img_ship_tied" src="images/ships/tied.png">
+								
+								<img id="img_ship_yt2000" src="images/ships/yt2000.png">
+							</div>
+							
+							<div id="result_upgrades">
+								<ul id="result_upgrades_sort">
+									<li id="img_ug_talents">
+										<img alt="E" src="images/ug/talents.png">
+									</li>
+									<li id="img_ug_systems">
+										<img alt="S" src="images/ug/systems.png">
+									</li>
+									<li id="img_ug_turret">
+										<img alt="T" src="images/ug/turret.png">
+									</li>
+									<li id="img_ug_cannons">
+										<img alt="L" src="images/ug/cannons.png">
+									</li>
+									<li id="img_ug_bombs">
+										<img alt="B" src="images/ug/bombs.png">
+									</li>
+									<li id="img_ug_bombs2">
+										<img alt="B" src="images/ug/bombs.png">
+									</li>
+									<li id="img_ug_missiles">
+										<img alt="M" src="images/ug/missiles.png">
+									</li>
+									<li id="img_ug_missiles2">
+										<img alt="M" src="images/ug/missiles.png">
+									</li>
+									<li id="img_ug_torpedoes">
+										<img alt="P" src="images/ug/torpedoes.png">
+									</li>
+									<li id="img_ug_torpedoes2">
+										<img alt="P" src="images/ug/torpedoes.png">
+									</li>
+									<li id="img_ug_crew">
+										<img alt="C" src="images/ug/crew.png">
+									</li>
+									<li id="img_ug_crew2">
+										<img alt="C" src="images/ug/crew.png">
+									</li>
+									<li id="img_ug_astromech">
+										<img alt="A" src="images/ug/astromech.png">
+									</li>
+								</ul>
+							</div>
+							
+							<div id="result_pts"><p>15</p></div>
+							
+							<div id="result_arc_360"><img src="images/arc_360.png"></div>
+							<div id="result_arc_avar"><img src="images/arc_avar.png"></div>
+							
+							<div id="result_ref_link"><img src="css/images/link.png"></div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div id="checkbox_upgrades">
+					<input type="checkbox" id="ug_systems">
+					<label for="ug_systems"><img src="images/ug/systems.png"/></label>
+					
+					<input type="checkbox" id="ug_turret">
+					<label for="ug_turret"><img src="images/ug/turret.png"/></label>
+								
+					<input type="checkbox" id="ug_cannons">
+					<label for="ug_cannons"><img src="images/ug/cannons.png"/></label>
+					
+					<input type="checkbox" id="ug_bombs">
+					<label for="ug_bombs"><img src="images/ug/bombs.png"/></label>
+					
+					<input type="checkbox" id="ug_missiles">
+					<label for="ug_missiles"><img src="images/ug/missiles.png"/></label>
+					
+					<input type="checkbox" id="ug_torpedoes">
+					<label for="ug_torpedoes"><img src="images/ug/torpedoes.png"/></label>
+					
+					<input type="checkbox" id="ug_crew">
+					<label for="ug_crew"><img src="images/ug/crew.png"/></label>
+											&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" id="ug_reset">
+					<label for="ug_reset"><img class="button_icon" src="css/images/reset.png"/></label>
+					<br>
+					<input type="checkbox" id="ug_talents">
+					<label for="ug_talents"><img src="images/ug/talents.png"/></label>
+					
+					<input type="checkbox" id="ug_astromech">
+					<label for="ug_astromech"><img src="images/ug/astromech.png"/></label>
+			
+					<input type="checkbox" id="ug_bombs2">
+					<label for="ug_bombs2"><img src="images/ug/bombs.png"/></label>
+					
+					<input type="checkbox" id="ug_missiles2">
+					<label for="ug_missiles2"><img src="images/ug/missiles.png"/></label>
+					
+					<input type="checkbox" id="ug_torpedoes2">
+					<label for="ug_torpedoes2"><img src="images/ug/torpedoes.png"/></label>
+					
+					<input type="checkbox" id="ug_crew2">
+					<label for="ug_crew2"><img src="images/ug/crew.png"/></label>
+
+				
+				</div>
+			</div>
+			
+			<div id="design_right">
+				<div id="design_right_imagefond">
+					<div id="design_bloc_image">
+						<span class="text"><i>Les [BBcode] sont automatiquement supprimés</i></span>
+						<br>
+						<span class="text">Adresse image : </span><input type="text" id="image" value="">
+						<br>
+						<input type="submit" id="loadimage" value="Charger">
+						<input type="submit" id="resetimageposition" value="Position: 0">
+						<input type="submit" id="resetimage" value="Reset">
+						<input type="submit" id="debug_addimmage" value="AddImg">
+					</div>
+					<div id="design_bloc_iframe">
+						<iframe src="http://imagesia.com/mini?text_color=333333&amp;code=bbcode" name="imagesia" id="imagesia" width="350" height="130" border="0" frameborder="0" noresize="noresize"></iframe>
+					</div>
+				</div>
+				
+				<div id="pilot_power_icon">
+					<input type="radio" id="empty" name="pilot_power_icons">
+				
+					<input type="radio" id="i_focus" name="pilot_power_icons">
+					<label for="i_focus"><img src="images/icons/focusw.png"/></label>
+					
+					<input type="radio" id="i_evade" name="pilot_power_icons">
+					<label for="i_evade"><img src="images/icons/evadew.png"/></label>
+					
+					<input type="radio" id="i_lock" name="pilot_power_icons">
+					<label for="i_lock"><img src="images/icons/lockw.png"/></label>
+					
+					<input type="radio" id="i_roll" name="pilot_power_icons">
+					<label for="i_roll"><img src="images/icons/rollw.png"/></label>
+					
+					<input type="radio" id="i_hit" name="pilot_power_icons">
+					<label for="i_hit"><img src="images/icons/hitw.png"/></label>
+					
+					<input type="radio" id="i_crit" name="pilot_power_icons">
+					<label for="i_crit"><img src="images/icons/critw.png"/></label>
+					<br>
+					<input type="radio" id="i_boost" name="pilot_power_icons">
+					<label for="i_boost"><img src="images/icons/boostw.png"/></label>
+					
+					<input type="radio" id="i_turnleft" name="pilot_power_icons">
+					<label for="i_turnleft"><img src="images/icons/turnleftw.png"/></label>
+					
+					<input type="radio" id="i_bankleft" name="pilot_power_icons">
+					<label for="i_bankleft"><img src="images/icons/bankleftw.png"/></label>
+					
+					<input type="radio" id="i_straight" name="pilot_power_icons">
+					<label for="i_straight"><img src="images/icons/straightw.png"/></label>
+					
+					<input type="radio" id="i_bankright" name="pilot_power_icons">
+					<label for="i_bankright"><img src="images/icons/bankrightw.png"/></label>
+					
+					<input type="radio" id="i_turnright" name="pilot_power_icons">
+					<label for="i_turnright"><img src="images/icons/turnrightw.png"/></label>
+					
+					<input type="radio" id="i_koiogran" name="pilot_power_icons">
+					<label for="i_koiogran"><img src="images/icons/koiogranw.png"/></label>
+				</div>
+				<div id="pilot_text">
+					<div id="pilot_text_style_radio">
+						<input type="radio" id="text_grey" name="pilot_text_style">
+						<label for="text_grey">Normal</label>
+						
+						<input type="radio" id="text_black" name="pilot_text_style" checked>
+						<label for="text_black">Pouvoir</label>
+					</div>
+					&nbsp;&nbsp;&nbsp;
+					<div id="pilot_text_size_radio">
+						<input type="radio" id="text_size_small" name="pilot_text_size">
+						<label for="text_size_small">Plus petit</label>
+						
+						<input type="radio" id="text_size_normal" name="pilot_text_size" checked>
+						<label for="text_size_normal">Normal</label>
+					</div>					
+				</div>
+				<div id="pilot_text_content">
+					<textarea id="pilot_power"></textarea>
+				</div>
+				<div id="checkbox_actions">
+					<span class="text">Actions : </span>
+					<input type="checkbox" id="a_focus">
+					<label for="a_focus"><img src="images/actions/focusw.png"/></label>
+					
+					<input type="checkbox" id="a_lock">
+					<label for="a_lock"><img src="images/actions/lockw.png"/></label>
+					
+					<input type="checkbox" id="a_roll">
+					<label for="a_roll"><img src="images/actions/rollw.png"/></label>
+					
+					<input type="checkbox" id="a_boost">
+					<label for="a_boost"><img src="images/actions/boostw.png"/></label>
+					
+					<input type="checkbox" id="a_evade">
+					<label for="a_evade"><img src="images/actions/evadew.png"/></label>
+				</div>
+				<div id="design_bloc_calcul">
+					<fieldset>
+						<legend> Calcul de la valeur du vaisseau </legend>
+						<div id="design_bloc_calcul_auto">
+							<input type="radio" id="pilot_val_auto" name="pilot_value_type" checked="checked">
+							<label for="pilot_val_auto">
+								<span class="text">Automatique : (<span id="pts_calcules"></span>)</span>
+							</label> <i>&nbsp;&nbsp;-> <a class="text" style="color:orange !important;" href="http://www.sw-xwing.com/t1882-Travail-sur-la-matrice-de-calcul-de-Galuf.htm" target="_blank">ajuster cette valeur</a></i><br>
+							<div id="design_bloc_power"><span class="text"><br>1/ Saisir une valeur pour<br>le pouvoir du pilote :</span><br><br>
+								<span id="pilot_power_val">
+									<input type="radio" id="pilot_power_val_0" value="0" name="pilot_power_value"  checked="checked">
+									<label for="pilot_power_val_0">0</label>
+									<input type="radio" id="pilot_power_val_1" value="1" name="pilot_power_value">
+									<label for="pilot_power_val_1">1</label>
+									<input type="radio" id="pilot_power_val_2" value="2" name="pilot_power_value">
+									<label for="pilot_power_val_2">2</label>
+									<input type="radio" id="pilot_power_val_3" value="3" name="pilot_power_value">
+									<label for="pilot_power_val_3">3</label>
+								</span>
+							</div>
+							<div id="pilot_socle_val">
+								<span class="text">2/ Taille du socle :</span><br>
+								<input type="radio" name="pilot_socle" id="pilot_socle_petit">
+								<label for="pilot_socle_petit">Petit</label>
+								
+								<input type="radio" name="pilot_socle" id="pilot_socle_gros">
+								<label for="pilot_socle_gros">Gros</label>
+							</div>
+							<br><br><br><br>
+							<input type="radio" id="pilot_val_manuel" name="pilot_value_type">  <label for="pilot_val_manuel">
+							<span class="text">Manuelle :</span></label> 
+							<span id="pilot_power_val_man"><input type="text" maxlength="2" id="pilot_value"></span>
+						</div>
+						<div id="design_bloc_manoeuvre">
+							<span class="text">3/ Manoeuvres :
+							<select id="template_move">
+								<option value="init">- Choix vaisseau -</option>
+								<option value="00131111101121100222000">X-wing</option>
+								<option value="00333111301121100121000">Y-wing</option>
+								<option value="00130111031121101222100">Faucon</option>
+								<option value="23201121132222201000100">A-wing</option>
+								<option value="00300313001121133222300">B-wing</option>
+								<option value="00300313001121100222000">HWK-290</option>
+								<option value="10131121131222101000100">Tie Fighter</option>
+								<option value="10131121101121100202000">Tie Advanced</option>
+								<option value="00131111131121100222000">Slave-1</option>
+								<option value="13201121132222201000100">Tie Interceptor</option>
+								<option value="00000313003121300222003">Lambda</option>
+								<option value="03101121103222300121000">Tie Bomber</option>
+								<option value="00000000000000000000000">- vider -</option>
+							</select>
+							</span>
+							<table id="movetable">
+								<tr>
+									<td title="-1" rowspan="6" style="width:41px;"></td>
+									<td title="-1" colspan="2" rowspan="2"></td>
+									<td title="0">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="-1" colspan="2" rowspan="2"></td>
+									<td title="1">
+										<img src="images/moves/blank.png">
+									</td>
+								</tr>
+								<tr>
+									<td title="2">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="3">
+										<img src="images/moves/blank.png">
+									</td>
+								</tr>
+								<tr>
+									<td title="4">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="5">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="6">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="7">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="8">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="9">
+										<img src="images/moves/blank.png">
+									</td>
+								</tr>
+								<tr>
+									<td title="10">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="11">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="12">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="13">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="14">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="15">
+										<img src="images/moves/blank.png">
+									</td>
+								</tr>
+								<tr>
+									<td title="16">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="17">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="18">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="19">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="20">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="21">
+										<img src="images/moves/blank.png">
+									</td>
+								</tr>
+								<tr>
+									<td title="-1" colspan="2"></td>
+									<td title="22">
+										<img src="images/moves/blank.png">
+									</td>
+									<td title="-1" colspan="3"></td>
+								</tr>
+							</table>
+							<i>Cliquer pour changer les manoeuvres !</i>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<input type="checkbox" id="remove_credit">
+					<label for="remove_credit">
+						<span class="text">
+							Sauvegarder pour préparer l'impression,<br>pensez à soutenir l'Atelier du Faucon<br>quand vous partager vos créations.
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div id="body_bottom">
+			<div id="design_bottom_left">
+				<div id="master_socle">
+					<div id="result_socle">
+						<div id="result_pilot_name_socle">Nouveau Pilote</div>
+						
+						<div id="result_vp_socle"><img src=""></div>
+						<div id="result_att_socle"><img src=""></div>
+						<div id="result_def_socle"><img src=""></div>
+						<div id="result_hull_socle"><img src=""></div>
+						<div id="result_shields_socle"><img src=""></div>
+								
+						<div id="result_actions_socle">
+							<div id="result_actions_socle_sizer"> </div>
+							<div id="result_actions_socle_size_control">
+								<img id="img_a_evade_socle" alt="E" src="images/socle/evade.png">
+								<img id="img_a_boost_socle" alt="B" src="images/socle/boost.png">
+								<img id="img_a_roll_socle" alt="R"  src="images/socle/roll.png">
+								<img id="img_a_lock_socle" alt="T" src="images/socle/lock.png">
+								<img id="img_a_focus_socle" alt="F" src="images/socle/focus.png">
+							</div>
+						</div>
+						
+						<div id="result_ships_icon_socle">
+							<img id="img_ship_xwing_socle" src="images/ships/xwing.png">
+							<img id="img_ship_ywing_socle" src="images/ships/ywing.png">
+							<img id="img_ship_faucon_socle" src="images/ships/faucon.png">
+							<img id="img_ship_awing_socle" src="images/ships/awing.png">
+							<img id="img_ship_hwk_socle" src="images/ships/hwk.png">
+							<img id="img_ship_bwing_socle" src="images/ships/bwing.png">
+							<img id="img_ship_ewing_socle" src="images/ships/ewing.png">
+							<img id="img_ship_z95_socle" src="images/ships/z95.png">
+							
+							<img id="img_ship_gr75_socle" src="images/ships/gr75.png">
+							<img id="img_ship_cr90_socle" src="images/ships/cr90.png">
+							
+							<img id="img_ship_tief_socle" src="images/ships/tief.png">
+							<img id="img_ship_tiea_socle" src="images/ships/tiea.png">
+							<img id="img_ship_slave_socle" src="images/ships/slave.png">
+							<img id="img_ship_tiei_socle" src="images/ships/tiei.png">
+							<img id="img_ship_lambda_socle" src="images/ships/lambda.png">
+							<img id="img_ship_tieb_socle" src="images/ships/tieb.png">
+							<img id="img_ship_tiep_socle" src="images/ships/tiep.png">
+							<img id="img_ship_tied_socle" src="images/ships/tied.png">
+							
+							<img id="img_ship_yt2000_socle" src="images/ships/yt2000.png">
+						</div>
+					</div>
+				</div>
+				
+				<div id="master_socle_big">
+					<div id="result_socle_big">
+						<div id="result_pilot_name_socle_big">Nouveau Pilote</div>
+						
+						<div id="result_vp_socle_big"><img src=""></div>
+						<div id="result_att_socle_big"><img src=""></div>
+						<div id="result_def_socle_big"><img src=""></div>
+						<div id="result_hull_socle_big"><img src=""></div>
+						<div id="result_shields_socle_big"><img src=""></div>
+								
+						<div id="result_actions_socle_big">
+							<div id="result_actions_socle_big_sizer"> </div>
+							<div id="result_actions_socle_big_size_control">
+								<img id="img_a_evade_socle_big" alt="E" src="images/socle/evade.png">
+								<img id="img_a_boost_socle_big" alt="B" src="images/socle/boost.png">
+								<img id="img_a_roll_socle_big" alt="R"  src="images/socle/roll.png">
+								<img id="img_a_lock_socle_big" alt="T" src="images/socle/lock.png">
+								<img id="img_a_focus_socle_big" alt="F" src="images/socle/focus.png">
+							</div>
+						</div>
+						
+						<div id="result_ships_icon_socle_big">
+							<img id="img_ship_xwing_socle_big" src="images/ships/xwing.png">
+							<img id="img_ship_ywing_socle_big" src="images/ships/ywing.png">
+							<img id="img_ship_faucon_socle_big" src="images/ships/faucon.png">
+							<img id="img_ship_awing_socle_big" src="images/ships/awing.png">
+							<img id="img_ship_hwk_socle_big" src="images/ships/hwk.png">
+							<img id="img_ship_bwing_socle_big" src="images/ships/bwing.png">
+							<img id="img_ship_ewing_socle_big" src="images/ships/ewing.png">
+							<img id="img_ship_z95_socle_big" src="images/ships/z95.png">
+							
+							<img id="img_ship_gr75_socle_big" src="images/ships/gr75.png">
+							<img id="img_ship_cr90_socle_big" src="images/ships/cr90.png">
+							
+							<img id="img_ship_tief_socle_big" src="images/ships/tief.png">
+							<img id="img_ship_tiea_socle_big" src="images/ships/tiea.png">
+							<img id="img_ship_slave_socle_big" src="images/ships/slave.png">
+							<img id="img_ship_tiei_socle_big" src="images/ships/tiei.png">
+							<img id="img_ship_lambda_socle_big" src="images/ships/lambda.png">
+							<img id="img_ship_tieb_socle_big" src="images/ships/tieb.png">
+							<img id="img_ship_tiep_socle_big" src="images/ships/tiep.png">
+							<img id="img_ship_tied_socle_big" src="images/ships/tied.png">
+							
+							<img id="img_ship_yt2000_socle_big" src="images/ships/yt2000.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="design_bottom_right">
+				<div id="master_dial_out">
+					
+					<div id="result_ship_name_dial_size_control" class="nowrap">
+						<div id="result_ship_name_dial">Vaisseau</div>
+						<div id="master_dial_out_sizer"></div>
+					</div>
+				</div>
+				<div id="master_dial_in">
+					<canvas id="dial_canvas" width="532" height="532"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="disclaimer" class="text">
+	Outil créé par <b>oopinou</b> pour l'Atelier du Faucon. Inspiré par le travail de Jason Fuller et basé sur les templates HD de Tom Howard.<br>
+	Ce site n'est pas avalisé par Lucasfilm Ltd., Fantasy Flight Games ou EdgeEnt et a été créé dans le but de divertir. Star Wars, le logo Star Wars, ainsi que tous les visuels sont des marques commerciales enregistrées et/ou copyrights de leurs propriétaires respectifs.</div>
+					
+	<div id="save_dialog" title="Téléchargez votre image">
+		<div style="text-align:center;">
+			Téléchargez votre image avec un clic droit, puis "enregistrer l'image sous ...",<br>si ça ne marche pas, essayez de recharger la page.
+		</div>
+		<br><br>
+		<div style="text-align:center;">
+			<img id="save_dialog_back" src=""/>
+			<img id="save_dialog_img" src=""/>
+			<img id="save_dialog_socle" src=""/>
+			<img id="save_dialog_dial_out" src=""/>
+			<img id="save_dialog_dial_in" src=""/>
+		</div>
+		<br><br>
+		<div style="text-align:center;">
+			Pour voir comment <b>imprimer</b> vos images, cliquez <a id="print_infos">ici</a>.
+		</div>
+	</div>
+	
+	<div id="dialog_print" title="Comment imprimer vos cartes ?">
+		<p style="text-align:center;">
+			Pour imprimer vos images, vous pouvez suivre les instructions suivantes :
+		</p>
+		<br>
+		<br>- Téléchargez <a href="http://www.xnview.com/fr/xnviewmp/#downloads" target="_blank"><b>Xnview</b></a> pour votre système d'exploitation et installer le.
+		<br>- Ensuite, cherchez l'emplacement de l'image et ouvrez la avec un double clic :
+		<br><br>
+		<p style="text-align:center;">
+			<img src="./images/howto/1.png">
+		</p>
+		<br>- Une fois l'image ouverte, choisissez "Fichier/imprimer ..." :
+		<br><br>
+		<p style="text-align:center;">
+			<img src="./images/howto/2.png">
+		</p>
+		<br>- Choisissez l'option de mise en page "Unique - Personnalisé" :
+		<br><br>
+		<p style="text-align:center;">
+			<img src="./images/howto/3.png">
+		</p>
+		<br>- Choisissez la valeur correspondante* pour régler la largeur ET la hauteur d'impression :
+		<br>&nbsp;&nbsp;&nbsp; - Pour les cartes pilote  :
+		<span style="color:orange;"><b>8.85</b></span>
+		<br>&nbsp;&nbsp;&nbsp; - Pour les petits socles  :
+		<span style="color:orange;"><b>4.86</b></span>
+				<br>&nbsp;&nbsp;&nbsp; - Pour les gros socles  :
+		<span style="color:orange;"><b>9.18</b></span>
+		<br>&nbsp;&nbsp;&nbsp; - Pour les roues de manoeuvre  :
+		<span style="color:orange;"><b>4.37</b></span>
+		<br>		
+		Laissez "Garder les proportions" cochée puis cliquez sur "Imprimer" ** :
+		<br><br>
+		<p style="text-align:center;">
+			<img src="./images/howto/4.png">
+		</p>
+		<br>
+		<br>* si vous trouvez des valeurs différentes intéréssantes, merci de me contacter
+		<br>** pour les cartes, un gabarit d'impression est disponible pour faire des tests sans gacher d'encre, aller voir <a href="./images/howto/print_test.png" target="_blank">ici</a>.
+		
+	</div>
+	
+	<div id="dialog_zoom" title="Assistant zoom">
+		<p style="text-align:center;">
+			<img id="smiley" src=""><br>
+			<span>I'm a popup...</span>
+		</p>
+	</div>
+	
+	<div id="dialog_bug" title="Envoyer un bug">
+		<p style="text-align:center;">
+			Avant toutes chose, avez vous consulté le <a id="version_show2">changelog</a> pour voir la liste des bugs connus ?<br><br>
+			Sinon, si vous trouvez un bug ou que vous voulez faire une suggestion, merci d'utiliser le texte suivant et de remplir les informations : <br><br>
+		</p>
+		<p style="border: 1px solid white; padding: 8px;">
+			- version de l'outil : <span id="dialog_bug_version"></span><br>
+			- votre navigateur internet (<a target="_blank" href="http://www.whatismybrowser.com/">aide</a>) : <span id="dialog_bug_nav"></span><br>
+			- permalien de l'erreur : <span id="dialog_bug_permalien"></span><br>
+			- description du problème :<br>
+			- comment reproduire le bug :<br>
+			
+			+ joindre un screenshot du bug<br>
+		</p>
+			<br><br>
+		<p style="text-align:center;">
+			Ensuite envoyez moi un mail avec toutes ces informations à <a href="mailto:oopinou@gmail.com" target="_blank">oopinou@gmail.com</a> ou sur <a href="http://www.sw-xwing.com/t1873-AdF-Pilot-Card-Creator.htm" target="_blank">le forum</a>.
+			<br><br>
+			Merci de votre aide !
+		</p>
+			
+		
+	</div>
+	
+	<div id="dialog_version" title="Changelog">
+		<p class="text" style="margin: 15px;">
+			BUGS CONNUS :
+			<ul>
+				<li>Problème de position du texte sous FireFox</li>
+				<li>Calcul automatique de valeur d'un pilote en cours d'élaboration</li>
+				<li>Problème de police sur Internet Explorer</li>
+				<li>L'icône de vaisseau disparait aléatoirement lors du rechargement de la page</li>
+			</ul>
+			<br>
+			<b>v1.0 </b><i>(12/03/2014)</i> : 
+			<br>- Changement de la méthode d'affichage de la roue de manœuvre, permettant son enregistrement sans bug graphique
+			<br>- Correction d'un bug sous Fifefox qui ne permettait pas d'enregistrer l'image avec un clic droit à tous les coups 
+			<br><br>
+			<b>v0.6b </b><i>(12/03/2014)</i> : 
+			<br>- Ajout des informations pour imprimer le résultat.
+			<br>- Ajout des cartons de socle et roue de manœuvre
+			<br>- Ajout d'un bouton pour rétablir la position initiale de l'image
+			<br>- l'image et le nom de pilote ne seront plus écrasés si le permalink ne le modifie pas, mais sera sensible aux undo/redo.
+			<br><br>
+			<b>v0.5b </b><i>(11/03/2014)</i> : 
+			<br>- tous les évènements sont maintenant annulable via le "undo"
+			<br>- gestion plus intelligente de la sauvegarde du texte de pouvoir de pilote. Il ne sera plus écrasé si le permalink ne le modifie pas, mais sera sensible aux undo/redo.
+			<br>- il est maintenant possible de sauvegarder les retours à la ligne dans le texte du pouvoir de pilote
+			<br><br>
+			<b>v0.4b </b><i>(11/03/2014)</i> : 
+			<br>- correction d'un bug avec le proxy anciennement utilisé qui empêchait de récupérer l'image produite, mise en place d'un nouveau proxy qui devrait corriger le problème et accélérer la procédure.
+			<br>- Ajout de la version de l'outil dans le debug
+			<br><br>
+			<b>v0.3b </b><i>(11/03/2014)</i> : 
+			<br>- Suppression du cache navigateur html5 à cause de bug sur certains navigateurs qui gèrent mal le manifest et ne voient pas les mises à jour. :(
+			<br>- Corrections de quelques textes erronés
+			<br>- Les images du texte pilote en mode "plus petit" ont maintenant une taille plus adéquate
+			<br><br>
+			<b>v0.2b </b><i>(11/03/2014)</i> : 
+			<br>- Ajout d'un bouton rapport de bug
+			<br>- Il est maintenant possible de réduire un peu la taille du texte de pouvoir, pour faire rentrer une 5ème ligne
+			<br>- Le fond du nom de pilote ou de vaisseau ne deviendra plus noir à l'édition
+			<br>- Correction du clignotement lorsque l'on changeait la faction de la carte
+			<br>- L'encodage des caractères spéciaux sous Firefox ne devrait plus poser problème
+			<br>- Le pouvoir du pilote ne disparaitra plus si vous avez chargé un vaisseau via un lien de template rapide
+			<br>- Correction d'un bug de positionnement des textes sur les anciens navigateurs (à confirmer)
+			<br><br>
+			<b>v0.1b </b><i>(10/03/2014)</i> : 
+			<br>- Mise en ligne publique de l'outil
+			<br><br>
+			<a id="show_alpha_info">Voir les infos de l'apha</a>
+			<span id="alpha_info"><br><br>
+			<b>v0.14a </b><i>(09/03/2014 19h45)</i> : 
+			<br>- ajout du permalien directement dans la barre d'adresse
+			<br>- undo/redo fonctionnel
+			<br>- enregistrement des modifications plus intelligent
+			<br>- modification de l'emplacement de la barre de chargement
+			<br>- correction du design gauche quand l'écran est compressé
+			<br>- correction d'un bug qui décentrait le texte du pouvoir de pilote si on dézoomait trop
+			<br>- Les images deviennent maintenant grises quand on choisit l'affichage "normal" du texte de pouvoir
+			<br><br>
+			<b>v0.13a </b><i>(09/03/2014 16h47)</i> : 
+			<br>- correction du bug de positionnement du texte "points d'escadrons" sous firefox
+			<br>- Ajout des template de vaisseaux principaux (si vous voyez des erreurs n'hésitez pas)
+			<br>- modification de l'encadré "calcul"
+			<br><br>
+			<b>v0.12a </b><i>(09/03/2014 9h)</i> : 
+			<br>- Ajout de la fiche de manœuvre éditable du vaisseau
+			<br>- Début du travail sur les valeurs d'escadron en fonction des statistiques des vaisseaux
+			<br><br>
+			<b>v0.11a </b><i>(08/03/2014 15h15)</i> : 
+			<br>- Ajout d'un mode "Debug"
+			<br><br>
+			<b>v0.10a </b><i>(08/03/2014 14h45)</i> : 
+			<br>- Corrections css pour recaler les chiffres de caractéristiques
+			<br><br>
+			<b>v0.9a </b><i>(07/03/2014 18h)</i> : 
+			<br>- Ajout du niveau de zoom dans l'assistant
+			<br>- Corrections css
+			<br>- Ajout d'un background permanent au résultat, pour ne plus avoir l'effet de clignotement quand on change de faction
+			<br><br>
+			<b>v0.8a </b><i>(07/03/2014 17h)</i> : 
+			<br>- passage du contenu en UTF-8 pour résoudre quelques problèmes d'encodage
+			<br><br>
+			<b>v0.7a </b><i>(07/03/2014 16h)</i> : 
+			<br>- Test de compression javascript
+			<br>- Test disponibilité hors ligne de l'outil
+			<br>- Correction du loader de contenu
+			<br><br>
+			<b>v0.6a </b><i>(07/03/2014 14h)</i> : 
+			<br>- Correction du cache de mise hors ligne des pages, pour test
+			<br><br>
+			<b>v0.5a </b><i>(07/03/2014 4h)</i> : 
+			<br>- Ajout de l'icone AdF
+			<br>- Ajout d'un cache de mise hors ligne des pages
+			<br><br>
+			<b>v0.4a </b><i>(07/03/2014 2h45)</i> : 
+			<br>- Correction du rafraichissement des boutons après un reset
+			<br>- Refonte de la section "icones"
+			<br>- Ajout de l'assistant zoom
+			<br>- Ajout du disclaimer
+			<br><br>
+			<b>v0.3a </b><i>(06/03/2014 18h)</i> : 
+			<br>- Repositionnement des dialogs
+			<br>- Amélioration des sliders
+			<br>- Ajout de la possibilité de modifier la taille du nom de vaisseau
+			<br>- changement disposition permalien
+			<br><br>
+			<b>v0.2a </b><i>(06/03/2014 16h)</i> : 
+			<br>- Refonte complète du système de position à cause de problèmes de compatibilités sous Opéra.
+			<br>- La position de l'image d'illustration est maintenant enregistrée dans le permalien.
+			<br>- Correction du centrage des textes dans l'image de résultat.
+			<br>- Ajout du lien AtelierDuFaucon.com sur l'image, effaçable par une case à cocher.
+			<br><br>
+			<b>v0.1a </b><i>(06/03/2014 9h)</i> : mise en place de l'alpha
+
+
+
+
+			</span>
+		</p>
+	</div>
+	<div id="debug_history">
+		<span class="text">Debug history : </span>
+		<span id="debug" class="text"></span>
+	</div>
+	<div id="debug_points">
+		<span class="text">Debug points : </span>
+		<span id="debug2" class="text"></span>
+	</div>
+	</body>
+</html>

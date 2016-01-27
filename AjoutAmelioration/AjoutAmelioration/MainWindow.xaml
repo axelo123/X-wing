@@ -1,0 +1,51 @@
+﻿<Window x:Class="AjoutAmelioration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AjoutAmelioration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Fond.png"/>
+        </Grid.Background>
+        <Grid>
+            <Label x:Name="label" Content="Ajouter une carte amélioration :" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label2" Content="Nom :" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+            <Label x:Name="label3" Content="Coût :" Grid.Column="1" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+            <Label x:Name="label4" Content="Type :" Grid.Column="2" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+            <TextBox x:Name="textBox1" Grid.Row="1" TextWrapping="Wrap" Margin="10,0,15,10"/>
+            <TextBox x:Name="textBox1_Copy" Grid.Row="1" TextWrapping="Wrap" Grid.Column="1" Margin="54,0,43,10"/>
+            <TextBox x:Name="textBox1_Copy1" Grid.Row="1" TextWrapping="Wrap" Grid.Column="2" Margin="30,0,25,10"/>
+            <Label x:Name="label4_Copy" Content="Image :" Grid.Column="3" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+            <Button x:Name="button" Content="Recherche" Grid.Column="3" Grid.Row="1" Margin="26,10"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label1" Content="Description :" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+            <TextBox x:Name="textBox" Grid.Column="1" TextWrapping="Wrap" Margin="0,20,52,10" TextChanged="textBox_TextChanged"/>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+Orienté Objet C#(WPF,WinForm), Java(SE,android), PHP
+Non Orienté
+Objet
+C, HTML/CSS/JS/AJAX
+Manipulation
+de données
+SQL, UML, XML
+Framework jQuery, WPF, Winform
+IDE/Outil
+Informatique
+Eclipse, Netbeans, PhpStorm, Office, Android Studio, visual studio 2015
+Système
+d’exploitation
+Linux(ubuntu/debian/raspbian(raspberry)), Windows
+
+Langue		Lu 			Écrit		Parler
+Francais 	Excellent	Excellent	Excellent
+Anglais 	Très Bon 	Bon			Moyen
+Néerlandais Moyen 		Moyen 		Moyen

@@ -1,0 +1,106 @@
+Star Wars X-Wing Miniature Game	(FFG)
+
+Star Wars X-Wing Le Jeu de Figurines	(Edge Entertainment)
+
+http://www.edgeent.com/jeux/collection/star_wars_x-wing
+
+http://wiki.atelierdufaucon.com/p/Accueil
+
+http://x-wing.fabpsb.net/gindex.php?lng=fr
+
+
+	=============
+	CE QUI EXISTE (voir les fichiers carte_*.txt)
+	=============
+
+
+Informations spécifiques aux vaisseaux  (voir dans carte_vaisseau.txt)
+--------------------------------------
+
+Liste des manoeuvres disponibles (ceci n'a pas été encodé dans les fichiers texte)
+Nom de vaisseau
+Camp
+Valeur d'attaque (positif ou nulle)
+Valeur d'agilité (positif ou nulle)
+Valeur de coque/structure (strictement positif)
+Valeur de bouclier (positif ou nulle)
+Valeur d'énergie (positif ou nulle)
+Liste d'actions
+
+
+Informations spécifiques aux pilotes (voir dans carte_vaisseau.txt)
+-------------------------------------------------------------------
+
+Le pilote est unique ou pas (. devant le nom de pilote)
+Nom du pilote
+Valeur de pilotage/initiative (positive ou nulle)
+Liste de types d'amélioration
+Coût du pilote et de son vaisseau (strictement positive)
+Capacité (optionnelle, sinon remplacée par un commentaire, excepté pour certains vaisseaux immenses où les deux informations textuelles sont données)
+
+
+Informations spécifiques aux améliorations (carte_amelioration.txt)
+------------------------------------------
+
+Nom de l'amélioration (parfois, il s'agit d'un nom de pilote/personnage unique)
+Coût de l'amélioration (positive, nulle, négative !)
+Capacité (généralement obligatoire, sinon remplacée par un commentaire)
+Limitations :
+* de taille
+* de camp
+* de vaisseau (figurine)
+
+
+
+	====================================
+	CE QUI EST DISPONIBLE POUR UN JOUEUR (voir les fichiers collection_*.txt)
+	====================================
+
+Utilisateurs :
+* ceux qui possèdent le jeu :
+	-> peut gérer les vaisseaux, les cartes pilote/vaisseau et les cartes d'amélioration
+	   (la suppression et la modification peuvent poser des problèmes !!!)
+	-> peut gérer sa collection :
+		un certain nombre de figurines
+		un certain nombre de cartes pilote/vaisseau
+		un certain nombre de cartes d'amélioration
+	-> peut créer un ou plusieurs escadrons (une liste d'armée) pour x points
+* ceux qui ne possèdent pas le jeu :
+	-> peut créer un ou plusieurs escadrons (une liste d'armée) pour x points
+	
+	========================================
+	CE QUI EST ATTENDU COMME FONCTIONNALITES
+	========================================
+	
+Gestion des utilisateurs :
+- deux types d'utilisateurs :
+	- collectionneur (joueur possédant le jeu)
+	- invité (joueur ne possédant pas le jeu)
+- description :
+	- nom, prénom, pseudonyme
+	- login/mot de passe
+
+Pour les collectionneurs, gestion :
+	- figurines (vaisseaux)
+	- cartes pilote/vaisseau
+	- cartes d'amélioration
+
+Pour les collectionneurs, gestion de leur collection :
+	- nombre de figurines/vaisseaux de chaque type
+	- nombre de cartes pilote/vaisseau de chaque type
+	- nombre de cartes d'amélioration de chaque type
+	
+Pour tout utilisateur, gestion de ses escadrons :
+	- un nom et/ou un descriptif
+	- le choix de la collection
+	- le camp concerné (attention aux Racailles/scélérats qui peuvent compléter les forces de l'Empire ou des Rebelles)
+	- quantité de points (maximales) = coût total
+	- composition de l'escadron en respectant :
+		- quantité de figurines/vaisseaux disponibles dans la collection
+		- quantité de cartes pilote/vaisseau disponibles dans la collection
+		- quantité de cartes d'émalioration disponibles dans la collection
+		- toutes les règles de combinaisons
+
+Fonctionnalité finale attendue :
+	- générer à partir d'un escadron,
+	  un document imprimable et/ou facilement consultable (par exemple sur smartphone)

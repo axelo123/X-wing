@@ -1,0 +1,104 @@
+Camp	Taille	Vaisseau	Pilote	Quantité
+Alliance Rebelle	Normal	Chasseur de têtes Z-95	Pilote de l'escadron Bandit	2
+Alliance Rebelle	Normal	Chasseur de têtes Z-95	Pilote de l'escadron Tala	2
+Alliance Rebelle	Normal	Chasseur de têtes Z-95	Lieutenant Blount	2
+Alliance Rebelle	Normal	Chasseur de têtes Z-95	Airen Cracken	2
+Alliance Rebelle	Normal	A-wing	Pilote sur prototype	1
+Alliance Rebelle	Normal	A-wing	Pilote de l'escadron Vert	1
+Alliance Rebelle	Normal	A-wing	Gemmer Sojan	1
+Alliance Rebelle	Normal	A-wing	Jake Farrell	1
+Alliance Rebelle	Normal	Y-wing	Pilote de l'escadron Or	3
+Alliance Rebelle	Normal	Y-wing	Pilote de l'escadron Gris	3
+Alliance Rebelle	Normal	Y-wing	"Dutch" Vander	3
+Alliance Rebelle	Normal	Y-wing	Horton Salm	3
+Alliance Rebelle	Normal	X-wing	Pilote débutant	4
+Alliance Rebelle	Normal	X-wing	Pilote de l'escadron Rouge	4
+Alliance Rebelle	Normal	X-wing	Tarn Mison	1
+Alliance Rebelle	Normal	X-wing	"Hobbie" Klivian	1
+Alliance Rebelle	Normal	X-wing	Biggs Darklighter	2
+Alliance Rebelle	Normal	X-wing	Jek Porkins	1
+Alliance Rebelle	Normal	X-wing	Garven Dreis	1
+Alliance Rebelle	Normal	X-wing	Luke Skywalker	2
+Alliance Rebelle	Normal	X-wing	Wedge Antilles	1
+Alliance Rebelle	Normal	X-wing	Wes Janson	1
+Alliance Rebelle	Normal	B-wing	Pilote de l'escadron Bleu	3
+Alliance Rebelle	Normal	B-wing	Pilote de l'escadron Dague	3
+Alliance Rebelle	Normal	B-wing	Nera Dantels	1
+Alliance Rebelle	Normal	B-wing	Ibtisam	2
+Alliance Rebelle	Normal	B-wing	Keyan Farlander	1
+Alliance Rebelle	Normal	B-wing	Ten Numb	2
+Alliance Rebelle	Normal	K-wing	Pilote de l'escadron Warden	1
+Alliance Rebelle	Normal	K-wing	Pilote de l'escadron Guardian	1
+Alliance Rebelle	Normal	K-wing	Esege Tuketu	1
+Alliance Rebelle	Normal	K-wing	Miranda Doni	1
+Alliance Rebelle	Normal	E-wing	Pilote de l'escadron Valet	1
+Alliance Rebelle	Normal	E-wing	Pilote de l'escadron Lune noire	1
+Alliance Rebelle	Normal	E-wing	Ethan A'baht	1
+Alliance Rebelle	Normal	E-wing	Corran Horn	1
+Alliance Rebelle	Grand	YT-1300	Contrebandier de la Bordure Extérieure	1
+Alliance Rebelle	Grand	YT-1300	Chewbacca	1
+Alliance Rebelle	Grand	YT-1300	Lando Calrissian	1
+Alliance Rebelle	Grand	YT-1300	Han Solo	1
+Alliance Rebelle	Grand	YT-2400	Frontalier de l'espace sauvage	1
+Alliance Rebelle	Grand	YT-2400	Eaden Vrill	1
+Alliance Rebelle	Grand	YT-2400	"Leebo"	1
+Alliance Rebelle	Grand	YT-2400	Dash Rendar	1
+Alliance Rebelle	Immense	Transport moyen GR-75	/	1
+Alliance Rebelle	Immense	Corvette CR90	/	1
+Empire	Normal	Chasseur TIE	Pilote de l'académie	6
+Empire	Normal	Chasseur TIE	Pilote de l'escadron Obsidian	6
+Empire	Normal	Chasseur TIE	Pilote de l'escadron Noir	6
+Empire	Normal	Chasseur TIE	"Night Beast"	2
+Empire	Normal	Chasseur TIE	"Winged Gundark"	2
+Empire	Normal	Chasseur TIE	"Dark Curse"	2
+Empire	Normal	Chasseur TIE	"Backstabber"	2
+Empire	Normal	Chasseur TIE	"Mauler Mithel"	2
+Empire	Normal	Chasseur TIE	"Howlrunner"	2
+Empire	Normal	Bombardier TIE	Pilote de l'escadron Cimeterre	3
+Empire	Normal	Bombardier TIE	Pilote de l'escadron Gamma	3
+Empire	Normal	Bombardier TIE	Capitaine Jonus	3
+Empire	Normal	Bombardier TIE	Major Rhymer	3
+Empire	Normal	Intercepteur TIE	Pilote de l'escadron Alpha	2
+Empire	Normal	Intercepteur TIE	Pilote de l'escadron Avenger	2
+Empire	Normal	Intercepteur TIE	Pilote de l'escadron Sabre	4
+Empire	Normal	Intercepteur TIE	Pilote de la Garde royale	2
+Empire	Normal	Intercepteur TIE	Lieutenant Lorrir	1
+Empire	Normal	Intercepteur TIE	"Colère de Fel"	2
+Empire	Normal	Intercepteur TIE	Tetran Cowall	1
+Empire	Normal	Intercepteur TIE	Kir Kanos	1
+Empire	Normal	Intercepteur TIE	Turr Phennir	2
+Empire	Normal	Intercepteur TIE	Carnox Jax	1
+Empire	Normal	Intercepteur TIE	Soontir Fel	2
+Empire	Normal	TIE Punisher	Pilote de l'escadron Cutlass	1
+Empire	Normal	TIE Punisher	Pilote de l'escadron Noir Huit	1
+Empire	Normal	TIE Punisher	"Deathrain"	1
+Empire	Normal	TIE Punisher	"Redline"	1
+Empire	Normal	Chasseur avancé TIE X1	Pilote de l'escadron Tempest	2
+Empire	Normal	Chasseur avancé TIE X1	Pilote de l'escadron Storm	2
+Empire	Normal	Chasseur avancé TIE X1	Lieutenant Colzet	1
+Empire	Normal	Chasseur avancé TIE X1	Commandant Alozen	1
+Empire	Normal	Chasseur avancé TIE X1	Zertik Strom	1
+Empire	Normal	Chasseur avancé TIE X1	Maarek Stele	1
+Empire	Normal	Chasseur avancé TIE X1	Juno Eclipse	1
+Empire	Normal	Chasseur avancé TIE X1	Dark Vador	1
+Empire	Normal	Chasseur fantôme TIE	Pilote de l'escadron Sigma	1
+Empire	Normal	Chasseur fantôme TIE	Pilote de l'escadron Ombre	1
+Empire	Normal	Chasseur fantôme TIE	"Echo"	1
+Empire	Normal	Chasseur fantôme TIE	"Whisper"	1
+Empire	Normal	Défenseur TIE	Pilote de l'escadron Delta	1
+Empire	Normal	Défenseur TIE	Pilote de l'escadron Onyx	1
+Empire	Normal	Défenseur TIE	Colonel Vessery	1
+Empire	Normal	Défenseur TIE	Rexler Brath	1
+Empire	Grand	Navette de classe Lambda	Pilote du groupe Omicron	1
+Empire	Grand	Navette de classe Lambda	Capitaine Yorr	1
+Empire	Grand	Navette de classe Lambda	Colonel Jendon	1
+Empire	Grand	Navette de classe Lambda	Capitaine Kagi	1
+Empire	Grand	Firespray-31	Chasseur de primes	1
+Empire	Grand	Firespray-31	Krassis Trelix	1
+Empire	Grand	Firespray-31	Kath Scarlet	1
+Empire	Grand	Firespray-31	Boba Fett	1
+Empire	Grand	Décimateur VT-49	Chef de patrouille	1
+Empire	Grand	Décimateur VT-49	Capitaine Oicunn	1
+Empire	Grand	Décimateur VT-49	Commandant Kenkirk	1
+Empire	Grand	Décimateur VT-49	Contre-amiral Chiraneau	1
+Empire	Immense	Corvette de classe Raider	/	1

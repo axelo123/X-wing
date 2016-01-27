@@ -1,0 +1,13 @@
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.exe.config
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.exe
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.pdb
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\MainWindow.g.cs
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\App.g.cs
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration_MarkupCompile.cache
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration_MarkupCompile.lref
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\MainWindow.baml
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.g.resources
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.Properties.Resources.resources
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.csproj.GenerateResource.Cache
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.exe
+c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.pdb

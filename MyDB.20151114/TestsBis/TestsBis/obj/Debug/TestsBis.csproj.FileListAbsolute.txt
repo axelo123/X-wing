@@ -7,6 +7,3 @@ C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.Propertie
 C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.csproj.GenerateResource.Cache
 C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.exe
 C:\EICE\COURS\2015-2016\PAC\Tools\TestsBis\TestsBis\obj\Debug\TestsBis.pdb
-C:\Users\AXEL\Desktop\Stars Wars\MyDB.20151114\TestsBis\TestsBis\bin\Debug\TestsBis.exe.config
-C:\Users\AXEL\Desktop\Stars Wars\MyDB.20151114\TestsBis\TestsBis\obj\Debug\TestsBis.exe
-C:\Users\AXEL\Desktop\Stars Wars\MyDB.20151114\TestsBis\TestsBis\obj\Debug\TestsBis.pdb

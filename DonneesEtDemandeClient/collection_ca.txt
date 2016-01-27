@@ -1,0 +1,100 @@
+Type d'amélioration	Nom	Quantité
+Bombe	Bombes à protons	2
+Bombe	Charges sismiques	3
+Bombe	Mines de proximité	1
+Canon	Canon ionique	1
+Canon	Canon laser lourd	3
+Droïde	Astromech R2	2
+Droïde	Astromech R5	1
+Droïde	R2-D2	1
+Droïde	R2-D6	1
+Droïde	R2-F2	1
+Droïde	R3-A2	1
+Droïde	R4-D6	1
+Droïde	R5-D8	1
+Droïde	R5-K6	1
+Droïde	R5-P9	1
+Equipage	"Leebo"	1
+Equipage	Agent de renseignement	1
+Equipage	Canonnier	2
+Equipage	Carlist Rieekan	1
+Equipage	Chewbacca	1
+Equipage	Copilote mercenaire	2
+Equipage	Dark Vador	1
+Equipage	Dash Rendar	1
+Equipage	Droïde de réparation WED-15	1
+Equipage	Ingénieur en armement	2
+Equipage	Jan Dodonna	1
+Equipage	Jan Ors	1
+Equipage	Kyle Katarn	1
+Equipage	Lando Calrissian	1
+Equipage	Luke Skywalker	1
+Equipage	Navigateur	1
+Equipage	Nien Numb	1
+Equipage	Officier en reconnaissance	1
+Equipage	Pilote instructeur	1
+Equipage	Prisonnier rebelle	1
+Equipage	Tacticien	1
+Equipage	Toryn Farr	1
+Matériel de cargaison	Amplificateur Comm	1
+Matériel de cargaison	Booster	1
+Matériel de cargaison	Brouilleur de fréquence	1
+Matériel de cargaison	Compartiments supplémentaires	1
+Matériel de cargaison	Emetteur EM	1
+Matériel de cargaison	Générateur de bouclier auxiliaire	1
+Matériel de cargaison	Outils de Slicer	1
+Matériel de cargaison	Projecteur de boucliers	1
+Matériel de cargaison	Réserves de gaz Tibanna	1
+Missile	Missiles à concussion	2
+Missile	Missiles à pulsations ioniques	1
+Missile	Missiles à tête chercheuse	1
+Missile	Missiles d'assaut	4
+Missile	Missiles groupés	1
+Missile	Radoub à Chardaan	3
+Missile	Roquettes à protons	3
+Modification	Accélérateur de particules de stygium	1
+Modification	Boucliers améliorés	4
+Modification	B-wing/E2	2
+Modification	Contre-mesures	2
+Modification	Coque améliorée	2
+Modification	Interface expérimentale	1
+Modification	Lasers antipoursuite	2
+Modification	Moteurs améliorés	2
+Modification	Munitions à sûreté intégrée	1
+Modification	Ordinateur de visée	2
+Modification	Préparé pour le combat	1
+Modification	Système d'occultation	2
+Modification	Système d'occultation avancé	1
+Senseur	Brouilleur de senseurs	1
+Senseur	Radars améliorés	2
+Senseur	Senseurs avancés	1
+Senseur	Système de commande de tir	1
+Talent	Adresse au tir	3
+Talent	As de l'espace	2
+Talent	Chef d'escouade	1
+Talent	Détermination	2
+Talent	Insaisissable	1
+Talent	Instinct de vétéran	2
+Talent	Je les attire !	1
+Talent	Loup solitaire	1
+Talent	Manœuvre improbable	1
+Talent	Montée d'adrénaline	2
+Talent	Opportuniste	2
+Talent	Prédateur	1
+Talent	Prise de risque	1
+Talent	Repousser les limites	2
+Talent	Restez en ligne	1
+Talent	Tactique de nuée	1
+Titre	Bright Hope	1
+Titre	Dutyfree	1
+Titre	Faucon Millenium	1
+Titre	Outrider	1
+Titre	Pilote d'essai sur A-wing	2
+Titre	Quantum Storm	1
+Titre	Slave One	1
+Titre	ST-321	1
+Titre	TIE de la Garde royale	2
+Torpille	Torpilles à proton	7
+Torpille	Torpilles à proton avancées	2
+Torpille	Torpilles fléchettes	3
+Tourelle	Tourelle à canons ioniques	2

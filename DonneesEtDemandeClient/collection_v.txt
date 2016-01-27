@@ -1,0 +1,23 @@
+Camp	Taille	Vaisseau	Quantité
+Alliance Rebelle	Normal	Chasseur de têtes Z-95	2
+Alliance Rebelle	Normal	A-wing	1
+Alliance Rebelle	Normal	Y-wing	3
+Alliance Rebelle	Normal	X-wing	4
+Alliance Rebelle	Normal	B-wing	3
+Alliance Rebelle	Normal	K-wing	1
+Alliance Rebelle	Normal	E-wing	1
+Alliance Rebelle	Grand	YT-1300	1
+Alliance Rebelle	Grand	YT-2400	1
+Alliance Rebelle	Immense	Transport moyen GR-75	1
+Alliance Rebelle	Immense	Corvette CR90	1
+Empire	Normal	Chasseur TIE	6
+Empire	Normal	Bombardier TIE	3
+Empire	Normal	Intercepteur TIE	4
+Empire	Normal	TIE Punisher	1
+Empire	Normal	Chasseur avancé TIE X1	2
+Empire	Normal	Chasseur fantôme TIE	1
+Empire	Normal	Défenseur TIE	1
+Empire	Grand	Navette de classe Lambda	1
+Empire	Grand	Firespray-31	1
+Empire	Grand	Décimateur VT-49	1
+Empire	Immense	Corvette de classe Raider	1
