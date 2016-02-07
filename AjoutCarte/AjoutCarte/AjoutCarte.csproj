@@ -74,10 +74,14 @@
     <Compile Include="action.xaml.cs">
       <DependentUpon>action.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ship.xaml.cs">
-      <DependentUpon>ship.xaml</DependentUpon>
+    <Compile Include="AjouterLaCarte.xaml.cs">
+      <DependentUpon>AjouterLaCarte.xaml</DependentUpon>
     </Compile>
     <Page Include="action.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AjouterLaCarte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,10 +125,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ship.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -167,17 +167,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Fond.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Barrel Roll.png" />
-    <Resource Include="Images\Boost.png" />
-    <Resource Include="Images\Cloack.png" />
-    <Resource Include="Images\Evade.png" />
-    <Resource Include="Images\Focus.png" />
-    <Resource Include="Images\Target Lock.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Améliorations\Astromech.png" />
     <Resource Include="Images\Améliorations\Bomb.png" />
     <Resource Include="Images\Améliorations\Cargo.png" />
@@ -197,6 +186,53 @@
   <ItemGroup>
     <Resource Include="Images\cartes\Imperial-Card.png" />
     <Resource Include="Images\cartes\Rebel Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\Barrel Roll.png" />
+    <Resource Include="Images\Action\Boost.png" />
+    <Resource Include="Images\Action\Cloack.png" />
+    <Resource Include="Images\Action\Evade.png" />
+    <Resource Include="Images\Action\Focus.png" />
+    <Resource Include="Images\Action\gr-75 %282%29.png" />
+    <Resource Include="Images\Action\gr-75 %283%29.png" />
+    <Resource Include="Images\Action\gr-75 %284%29.png" />
+    <Resource Include="Images\Action\gr-75 %285%29.png" />
+    <Resource Include="Images\Action\gr-75 %286%29.png" />
+    <Resource Include="Images\Action\gr-75.png" />
+    <Resource Include="Images\Action\Target Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ship\black.png" />
+    <Resource Include="Images\Ship\Custom Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ship\Captain-yorr.png" />
+    <Resource Include="Images\Ship\Slave 1.png" />
+    <Resource Include="Images\Ship\TIE Advanced Icon.png" />
+    <Resource Include="Images\Ship\TIE Bomber.png" />
+    <Resource Include="Images\Ship\TIE Defender.png" />
+    <Resource Include="Images\Ship\TIE Fantom.png" />
+    <Resource Include="Images\Ship\TIE Fighter Icon.png" />
+    <Resource Include="Images\Ship\TIE Interceptor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ship\A-wing Icon.png" />
+    <Resource Include="Images\Ship\B-wing.png" />
+    <Resource Include="Images\Ship\E-wing.png" />
+    <Resource Include="Images\Ship\GR-75 Rebel Transport.png" />
+    <Resource Include="Images\Ship\HWk-290.png" />
+    <Resource Include="Images\Ship\Tantive.png" />
+    <Resource Include="Images\Ship\X-wing Icon.png" />
+    <Resource Include="Images\Ship\Y-wing Icon.png" />
+    <Resource Include="Images\Ship\YT-1300 Icon.png" />
+    <Resource Include="Images\Ship\Z-95 Headhunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Améliorations\modification.png" />
+    <Resource Include="Images\Améliorations\Titres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ship\Fond.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

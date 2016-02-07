@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="CarteXWing.ZoomCarte"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarteXWing"
+             mc:Ignorable="d" Width="51.306" Height="70.871">
+    <Grid Margin="0">
+        <Image x:Name="CarteXWingZoom" HorizontalAlignment="Center" Height="700" Margin="0,0,0,25"  Width="450" Panel.ZIndex="100" OpacityMask="Red" Source="pack://siteoforigin:,,,/jek-porkins.png" Visibility="Hidden"/>
+        <Image x:Name="CarteXWing" Margin="0" Panel.ZIndex="100" OpacityMask="Red" Source="pack://siteoforigin:,,,/jek-porkins.png" Visibility="Visible" MouseRightButtonDown="CarteXWingZoom_MouseRightButtonDown" MouseRightButtonUp="CarteXWingZoom_MouseRightButtonUp"/>
+    </Grid>
+</UserControl>

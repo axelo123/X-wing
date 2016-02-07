@@ -1,0 +1,52 @@
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\bin\Debug\CarteXWing.exe.config
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\bin\Debug\CarteXWing.exe
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\bin\Debug\CarteXWing.pdb
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\MainWindow.g.cs
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\App.g.cs
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing_MarkupCompile.cache
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing_MarkupCompile.lref
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\MainWindow.baml
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing.g.resources
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing.Properties.Resources.resources
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing.csproj.GenerateResource.Cache
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing.exe
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing.pdb
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\ZoomCarte.g.cs
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\ZoomCarte.baml
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\CarteXWing.csprojResolveAssemblyReference.cache
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\AffichageCarte.g.cs
+c:\users\dim_l\onedrive\documents\visual studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\AffichageCarte.baml
+C:\Users\dim_l\OneDrive\Documents\Visual Studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\Escadrons.g.cs
+C:\Users\dim_l\OneDrive\Documents\Visual Studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\Escadrons.baml
+C:\Users\dim_l\OneDrive\Documents\Visual Studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\TabPanelXWing.g.cs
+C:\Users\dim_l\OneDrive\Documents\Visual Studio 2015\Projects\CarteXWing\CarteXWing\obj\Debug\TabPanelXWing.baml
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing.csprojResolveAssemblyReference.cache
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\AffichageCarte.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\Escadrons.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\MainWindow.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\TabPanelXWing.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\ZoomCarte.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\App.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing_MarkupCompile.cache
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing_MarkupCompile.lref
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\AffichageCarte.baml
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\Escadrons.baml
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\MainWindow.baml
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\TabPanelXWing.baml
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\ZoomCarte.baml
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing.g.resources
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing.csproj.GenerateResource.Cache
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing.pdb
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\CarteXWing.exe.config
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\CarteXWing.exe
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\CarteXWing.pdb
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\GenerateurCarte.exe
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\X-wing.exe
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\MyDbLib.dll
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\MySql.Data.dll
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\GenerateurCarte.pdb
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\bin\Debug\X-wing.pdb
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing.Properties.Resources.resources
+E:\CloneGit\X-wing\CarteXWing\CarteXWing\obj\Debug\CarteXWing.exe

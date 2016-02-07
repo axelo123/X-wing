@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="CarteXWing.Escadrons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarteXWing"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="250">
+    <Grid Margin="0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Button\FondNoirEscadron.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid  Margin="0,40,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="image0" Margin="6" Grid.Row="0" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image1" Margin="6" Grid.Row="1" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image2" Margin="6" Grid.Row="2" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image3" Margin="6" Grid.Row="3" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image4" Margin="6" Grid.Row="4" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image5" Margin="6" Grid.Row="5" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image6" Margin="6" Grid.Row="6" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Image x:Name="image7" Margin="6" Grid.Row="7" Grid.Column="0" Source="pack://siteoforigin:,,,/CarteEscadrons.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+        
+    </Grid>
+</UserControl>

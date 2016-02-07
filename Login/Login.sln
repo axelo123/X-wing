@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{109BCE54-28BE-40E2-90C3-47AB5FCBB247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjoutCarte", "..\AjoutCarte\AjoutCarte\AjoutCarte.csproj", "{F7CC3694-30F2-4D25-A7FA-5E1385FB34EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarteXWing", "..\CarteXWing\CarteXWing\CarteXWing.csproj", "{4F039F77-B3F1-41E6-A394-A580B82D6943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X-wing", "..\X-wing\X-wing.csproj", "{29E0068B-569A-458C-ABF1-80A4B91817D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateurCarte", "..\GenerateurCarte\GenerateurCarte\GenerateurCarte.csproj", "{E888A663-EAB5-406A-A36C-50E8F93EB16B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjoutAmelioration", "..\AjoutAmelioration\AjoutAmelioration\AjoutAmelioration.csproj", "{34D6CCC0-9C8D-4B18-A58C-74BDA44F5F26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{109BCE54-28BE-40E2-90C3-47AB5FCBB247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{109BCE54-28BE-40E2-90C3-47AB5FCBB247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{109BCE54-28BE-40E2-90C3-47AB5FCBB247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{109BCE54-28BE-40E2-90C3-47AB5FCBB247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7CC3694-30F2-4D25-A7FA-5E1385FB34EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7CC3694-30F2-4D25-A7FA-5E1385FB34EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7CC3694-30F2-4D25-A7FA-5E1385FB34EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7CC3694-30F2-4D25-A7FA-5E1385FB34EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F039F77-B3F1-41E6-A394-A580B82D6943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F039F77-B3F1-41E6-A394-A580B82D6943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F039F77-B3F1-41E6-A394-A580B82D6943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F039F77-B3F1-41E6-A394-A580B82D6943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E0068B-569A-458C-ABF1-80A4B91817D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E0068B-569A-458C-ABF1-80A4B91817D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E0068B-569A-458C-ABF1-80A4B91817D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E0068B-569A-458C-ABF1-80A4B91817D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E888A663-EAB5-406A-A36C-50E8F93EB16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E888A663-EAB5-406A-A36C-50E8F93EB16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E888A663-EAB5-406A-A36C-50E8F93EB16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E888A663-EAB5-406A-A36C-50E8F93EB16B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34D6CCC0-9C8D-4B18-A58C-74BDA44F5F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D6CCC0-9C8D-4B18-A58C-74BDA44F5F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D6CCC0-9C8D-4B18-A58C-74BDA44F5F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D6CCC0-9C8D-4B18-A58C-74BDA44F5F26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

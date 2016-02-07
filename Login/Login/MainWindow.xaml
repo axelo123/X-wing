@@ -1,0 +1,44 @@
+﻿<Window x:Name="AppWindow" x:Class="Login.Wrapper"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="Black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1056"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Row="0" x:Name="CanvasLogin" HorizontalAlignment="Center" Height="{Binding ActualHeight, ElementName=AppWindow, Mode=OneWay}" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=AppWindow, Mode=OneWay}">
+            <MediaElement x:Name="loginMP3" Source="Ressources/loginPage.mp3" Volume="1" />
+            <MediaElement x:Name="mainMenuMP3" Source="Ressources/MainMenu1.mp3" Volume="1" LoadedBehavior="Manual" />
+            <Image x:Name="bgLoginImage" Height="{Binding ActualHeight, ElementName=AppWindow, Mode=OneWay}" Canvas.Left="0" Canvas.Top="0"  Width="{Binding ActualWidth, ElementName=AppWindow, Mode=OneWay}" Source="Ressources/MattePainting1.jpg" Panel.ZIndex="100" />
+            <MediaElement x:Name="videoBackground" Height="{Binding ActualHeight, ElementName=AppWindow, Mode=OneWay}"  Canvas.Left="0" Canvas.Top="0"  Width="{Binding ActualWidth, ElementName=AppWindow, Mode=OneWay}" Source="Ressources/MattePainting1.mp4" Visibility="Collapsed" MediaEnded="videoBackground_MediaEnded"/>
+        </Canvas>
+        <Grid Grid.Row="1" Name="completeGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="1505"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Name="menu_grid" Height="1056" Margin="3,0,5,-7">
+                <Grid Name="gridMenu" HorizontalAlignment="Left" Height="1056" VerticalAlignment="Top" Width="400">
+                    <local:menu1 x:Name="menu"  HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="600"/>
+                </Grid>
+
+                
+            </Grid>
+            <Grid Grid.Column="1" Name="contentGrid" HorizontalAlignment="Left" Height="1057"  VerticalAlignment="Top" Width="1505">
+              
+            </Grid>
+        </Grid>
+        <local:CtrlLoginForm x:Name="login" HorizontalAlignment="center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

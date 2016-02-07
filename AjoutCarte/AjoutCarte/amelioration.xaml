@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AjoutCarte"
              mc:Ignorable="d" 
-             d:DesignHeight="159.895" d:DesignWidth="391.064">
+             d:DesignHeight="138.895" d:DesignWidth="356.064">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -16,6 +16,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -83,7 +84,7 @@
                     <ImageBrush ImageSource="Images/Améliorations/hardpoint.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="button5_Copy" Content="" Grid.Column="5" Grid.Row="1">
+            <Button x:Name="button5_Copy" Content="" Grid.Row="2">
                 <Button.Background>
                     <ImageBrush ImageSource="Images/Améliorations/croix.png"/>
                 </Button.Background>
@@ -91,6 +92,16 @@
             <Button x:Name="button5_Copy1" Content="" Grid.Column="6">
                 <Button.Background>
                     <ImageBrush ImageSource="Images/Améliorations/Laser Cannon.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy5" Content="" Grid.Column="5" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/modification.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button4_Copy6" Content="" Grid.Column="6" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Améliorations/Titres.png"/>
                 </Button.Background>
             </Button>
         </Grid>

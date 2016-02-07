@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="GenerateurCarte.CarteImperial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GenerateurCarte"
+             mc:Ignorable="d" HorizontalAlignment="Center" VerticalAlignment="Center" Height="430" Width="275" BorderBrush="Black">
+    <Grid>
+
+        <Grid Height="428" VerticalAlignment="Top">
+            <Image x:Name="photo" Source="images/1. Dutch Vander.png" Margin="0,-33,2,284" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.101"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="faction" Margin="-38,112,-38,-1" Source="images/imperial.png"/>
+            <TextBlock x:Name="NomPilote" Margin="53,118,40,289" TextWrapping="Wrap" Text="TextBlock" TextAlignment="Center"/>
+            <TextBlock x:Name="NomVaisseau" Margin="53,151,40,256" TextWrapping="Wrap" Text="TextBlock" TextAlignment="Center"/>
+            <TextBlock x:Name="PointAttaque" Margin="45,185,207,220" TextWrapping="Wrap" Foreground="#FFF71010" Text="3" TextAlignment="Center" FontSize="14.667" FontWeight="Bold"/>
+            <TextBlock x:Name="agilite" Margin="45,224,207,181" TextWrapping="Wrap" Foreground="#FF33A233" Text="3" TextAlignment="Center" FontSize="14.667" FontWeight="Bold"/>
+            <TextBlock x:Name="structure" Margin="45,263,207,142" TextWrapping="Wrap" Foreground="#FFD8D813" Text="3" TextAlignment="Center" FontSize="14.667" FontWeight="Bold"/>
+            <TextBlock x:Name="bouclier" Margin="45,302,207,103" TextWrapping="Wrap" Foreground="#FF4097D3" Text="3" TextAlignment="Center" FontSize="14.667" FontWeight="Bold"/>
+            <TextBlock x:Name="initiative" Margin="13,130,239,275" TextWrapping="Wrap" Foreground="#FFD38340" Text="3" TextAlignment="Center" FontSize="21.333" FontWeight="Bold"/>
+            <TextBlock x:Name="description" Margin="85,194,1,133" TextWrapping="Wrap" FontSize="10.667" FontFamily="Arial"><Run Text="TextBlock"/></TextBlock>
+            <Grid Margin="58,386,92,8">
+                <Grid.Background>
+                    <ImageBrush/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="amelioration_6" RenderTransformOrigin="0.503,-2.704">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_5" Grid.Column="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_4" Grid.Column="2">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_3" Grid.Column="3">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_2" Grid.Column="4">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_1" Grid.Column="5">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_12" Grid.Row="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_11" Grid.Row="1" Grid.Column="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_8" Grid.Column="4" Grid.Row="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_10" Grid.Column="2" Grid.Row="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_9" Grid.Column="3" Grid.Row="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+                <Image x:Name="amelioration_7" Grid.Column="5" Grid.Row="1">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="XWing/Amelioration/Astromech.png"/>
+                    </Image.OpacityMask>
+                </Image>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="18" Margin="15,348,0,0" VerticalAlignment="Top" Width="18"/>
+            <Grid Margin="112,332,22,71">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="action_3" Grid.Column="3"  HorizontalAlignment="Center"/>
+                <Image x:Name="action_2" Grid.Column="2"  HorizontalAlignment="Center"/>
+                <Image x:Name="action_1" Grid.Column="1"  HorizontalAlignment="Center"/>
+                <Image x:Name="action_4" Grid.Column="0"  HorizontalAlignment="Center"/>
+            </Grid>
+            <TextBlock x:Name="cout" Margin="221,391,20,16" TextWrapping="Wrap" Text="28" FontWeight="Bold" TextAlignment="Center">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="energie" Margin="45,340,207,65" TextWrapping="Wrap" Foreground="#FFC253C7" Text="3" TextAlignment="Center" FontSize="14.667" FontWeight="Bold"/>
+        </Grid>
+
+
+    </Grid>
+</UserControl>

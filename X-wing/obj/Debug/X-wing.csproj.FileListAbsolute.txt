@@ -1,0 +1,55 @@
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\X-wing.exe.config
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.csprojResolveAssemblyReference.cache
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\MainWindow.g.cs
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\View\Test1.g.cs
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\App.g.cs
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing_MarkupCompile.cache
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing_MarkupCompile.lref
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\X-wing.exe
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\X-wing.pdb
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\MySql.Data.dll
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\MainWindow.baml
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\View\Test1.baml
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.g.resources
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X_wing.Properties.Resources.resources
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.csproj.GenerateResource.Cache
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.exe
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\X-wing.pdb
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\X-wing.exe.config
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.exe
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\X-wing.exe
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\X-wing.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\MyDB.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\MySql.Data.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\bin\Debug\MyDB.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.csprojResolveAssemblyReference.cache
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\MainWindow.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\View\Test1.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\App.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing_MarkupCompile.cache
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing_MarkupCompile.lref
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\MainWindow.baml
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\View\Test1.baml
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.g.resources
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X_wing.Properties.Resources.resources
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\obj\Debug\X-wing.csproj.GenerateResource.Cache
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\bin\Debug\MyDbLib.dll
+E:\CloneGit\X-wing\X-wing\bin\Debug\X-wing.exe.config
+E:\CloneGit\X-wing\X-wing\bin\Debug\X-wing.exe
+E:\CloneGit\X-wing\X-wing\bin\Debug\X-wing.pdb
+E:\CloneGit\X-wing\X-wing\obj\Debug\MainWindow.g.cs
+E:\CloneGit\X-wing\X-wing\obj\Debug\View\Test1.g.cs
+E:\CloneGit\X-wing\X-wing\obj\Debug\App.g.cs
+E:\CloneGit\X-wing\X-wing\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\CloneGit\X-wing\X-wing\obj\Debug\X-wing_MarkupCompile.cache
+E:\CloneGit\X-wing\X-wing\obj\Debug\X-wing_MarkupCompile.lref
+E:\CloneGit\X-wing\X-wing\obj\Debug\MainWindow.baml
+E:\CloneGit\X-wing\X-wing\obj\Debug\View\Test1.baml
+E:\CloneGit\X-wing\X-wing\obj\Debug\X-wing.g.resources
+E:\CloneGit\X-wing\X-wing\obj\Debug\X_wing.Properties.Resources.resources
+E:\CloneGit\X-wing\X-wing\obj\Debug\X-wing.csproj.GenerateResource.Cache
+E:\CloneGit\X-wing\X-wing\obj\Debug\X-wing.exe
+E:\CloneGit\X-wing\X-wing\obj\Debug\X-wing.pdb

@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F039F77-B3F1-41E6-A394-A580B82D6943}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarteXWing</RootNamespace>
+    <AssemblyName>CarteXWing</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyDbLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\X-wing\MyDB.20151114\TestsBis\TestsBis\DLL\v4.0\MyDbLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\X-wing\MyDB.20151114\TestsBis\TestsBis\DLL\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AffichageCarte.xaml.cs">
+      <DependentUpon>AffichageCarte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Escadrons.xaml.cs">
+      <DependentUpon>Escadrons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TabPanelXWing.xaml.cs">
+      <DependentUpon>TabPanelXWing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfTools.cs" />
+    <Compile Include="ZoomCarte.xaml.cs">
+      <DependentUpon>ZoomCarte.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AffichageCarte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Escadrons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="TabPanelXWing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZoomCarte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ENV.ini" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Button\AmelioOff.png" />
+    <Resource Include="Button\AmelioOff1.png" />
+    <Resource Include="Button\AmelioOn.png" />
+    <Resource Include="Button\CVPOff.png" />
+    <Resource Include="Button\CVPOn.png" />
+    <Resource Include="Button\FigurineOff.png" />
+    <Resource Include="Button\FigurineOn.png" />
+    <Resource Include="Button\Fond.png" />
+    <Resource Include="Button\FondNoirEscadron.png" />
+    <Resource Include="Button\jek-porkins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GenerateurCarte\GenerateurCarte\GenerateurCarte.csproj">
+      <Project>{e888a663-eab5-406a-a36c-50e8f93eb16b}</Project>
+      <Name>GenerateurCarte</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\X-wing\X-wing.csproj">
+      <Project>{29e0068b-569a-458c-abf1-80a4b91817d4}</Project>
+      <Name>X-wing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1. Dutch Vander.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\2. Hobbie-klivian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Imperial-Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\imperial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Rebel Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\rebel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Barrel Roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Barrel Roll2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Boost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Boost2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Cloack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Cloack2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\cloak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\coordinate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Evade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Evade2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Focus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\jam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\recover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\renforcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\slam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Target Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Action\Target Lock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Astromech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Bomb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Cargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Crew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\hardpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\lasercanon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Missiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\modification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Sensor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\talent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Titres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\Torpedoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\turret.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\energie.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Bank Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Bank Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Barrel Roll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Boost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Critical Hit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Evade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Hit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Koiogran Turn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Straight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Target Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Turn Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Icons\Turn Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Imperial-Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Imperial Cardback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Rebel Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Rebel Cardback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Custom\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Custom\Custom Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\Captain-yorr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\Slave 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\TIE Advanced Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\TIE Bomber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\TIE Defender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\TIE Fantom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\TIE Fighter Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Empire\TIE Interceptor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\A-wing Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\B-wing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\E-wing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\GR-75 Rebel Transport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\HWk-290.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\Tantive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\X-wing Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\Y-wing Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\YT-1300 Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Ship\Rebel\Z-95 Headhunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Stats\360 Arc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Stats\Aux Arc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Stats\Fire Big ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Stats\Range.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XWing\Amelioration\cannon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

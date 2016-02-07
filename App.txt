@@ -1,0 +1,11 @@
+case "Acquisition De Cible" : break
+case "Concentration" : break
+case "Accélération" : break
+case "Évasion" : break
+case "Tonneau" : break
+case "SLAM" : break
+case "Brouillage" : break
+case "Coordination" : break
+case "Récupération" : break
+case "Renforcement" : break
+case "Occultation" : break

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Sylvain\Documents\Visual Studio 2015\Projects\AjoutCarte\AjoutCarte\obj\Debug\
+E:\CloneGit\X-wing\AjoutCarte\AjoutCarte\obj\Debug\
 AjoutCarte
 none
 false
 DEBUG;TRACE
-C:\Users\Sylvain\Documents\Visual Studio 2015\Projects\AjoutCarte\AjoutCarte\App.xaml
-71922045487
+E:\CloneGit\X-wing\AjoutCarte\AjoutCarte\App.xaml
+7-2062260060
 
-11-154673272
+11-11668039
 14-1001767708
-action.xaml;amelioration.xaml;carte.xaml;description.xaml;faction.xaml;MainWindow.xaml;ship.xaml;
+action.xaml;AjouterLaCarte.xaml;amelioration.xaml;carte.xaml;description.xaml;faction.xaml;MainWindow.xaml;
 
 False
 

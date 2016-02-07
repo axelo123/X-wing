@@ -1,0 +1,18 @@
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\bin\Debug\MyDB.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\bin\Debug\MyDB.pdb
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\bin\Debug\MySql.Data.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\obj\Debug\MyDB.csprojResolveAssemblyReference.cache
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\obj\Debug\MyDB.dll
+C:\EICE\COURS\2015-2016\PAC\Tools\MyDB\obj\Debug\MyDB.pdb
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\bin\Debug\MyDB.dll
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\bin\Debug\MyDB.pdb
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\bin\Debug\MySql.Data.dll
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\obj\Debug\MyDB.csprojResolveAssemblyReference.cache
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\obj\Debug\MyDB.dll
+C:\Users\AXEL\Desktop\Stars Wars\X-wing\X-wing\MyDB.20151114\MyDB\obj\Debug\MyDB.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\bin\Debug\MyDB.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\bin\Debug\MyDB.pdb
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\bin\Debug\MySql.Data.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\obj\Debug\MyDB.csprojResolveAssemblyReference.cache
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\obj\Debug\MyDB.dll
+C:\Users\Nono\Downloads\X-wing-ModelCore\X-wing-ModelCore\MyDB.20151114\MyDB\obj\Debug\MyDB.pdb

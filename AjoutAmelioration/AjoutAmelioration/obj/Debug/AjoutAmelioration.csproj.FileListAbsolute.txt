@@ -14,3 +14,13 @@ c:\users\sylvain\documents\visual studio 2015\Projects\AjoutAmelioration\AjoutAm
 E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.exe.config
 E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.exe
 E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.pdb
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.exe
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\bin\Debug\AjoutAmelioration.pdb
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\MainWindow.g.cs
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\App.g.cs
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration_MarkupCompile.cache
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration_MarkupCompile.lref
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\MainWindow.baml
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.g.resources
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.Properties.Resources.resources
+E:\CloneGit\X-wing\AjoutAmelioration\AjoutAmelioration\obj\Debug\AjoutAmelioration.csproj.GenerateResource.Cache
